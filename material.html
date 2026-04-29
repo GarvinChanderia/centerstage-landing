@@ -70,16 +70,16 @@
         <div class="flex items-center gap-6">
             <a href="https://centerstage.store/" class="hidden md:block px-6 py-2 bg-primary text-white font-serif text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">Buy Now</a>
             <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-toggle" class="md:hidden text-zinc-900">
+            <button id="mobile-menu-toggle" onclick="document.getElementById('mobile-menu').classList.remove('translate-x-full')" class="md:hidden text-zinc-900">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" style="background-color: #fcf9f1;" class="fixed inset-0 bg-surface z-[60] translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
+        <div id="mobile-menu" style="background-color: #fcf9f1 !important; opacity: 1 !important; z-index: 100;" class="fixed inset-0 translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
             <div class="flex justify-between items-center mb-16">
                 <span class="text-xl font-serif tracking-[0.2em] text-zinc-900 uppercase">Menu</span>
-                <button id="mobile-menu-close" class="text-zinc-900">
+                <button id="mobile-menu-close" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')" class="text-zinc-900">
                     <span class="material-symbols-outlined text-3xl">close</span>
                 </button>
             </div>
