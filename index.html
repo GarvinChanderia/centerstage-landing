@@ -1,577 +1,404 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Center-Stage-Primary-Logo.svg" type="image/svg+xml" />
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
 
-    <!-- SEO -->
-    <title>Center Stage — Premium Cotton Tees &amp; Dresses for Women | Made in India</title>
-    <meta name="description" content="Adjustable fits, 180 GSM cotton, and chemical-free dyes. Center Stage makes premium clothing for confident Indian women who refuse to compromise on comfort." />
-    <link rel="canonical" href="https://centerstage.store/" />
-
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website" />
-    <meta property="og:url"         content="https://centerstage.store/" />
-    <meta property="og:title"       content="Center Stage — Wear Your Confidence" />
-    <meta property="og:description" content="Premium tees, tops, and dresses for women who own every room they walk into. Free shipping over ₹2,500. Made in India." />
-    <meta property="og:image"       content="https://centerstage.store/images/cs-hero-a.jpg" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content="Center Stage — Wear Your Confidence" />
-    <meta name="twitter:description" content="Premium tees, tops, and dresses for women who own every room they walk into." />
-    <meta name="twitter:image"       content="https://centerstage.store/images/cs-hero-a.jpg" />
-
-    <!-- JSON-LD FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the fabric safe for sensitive skin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Every piece of clothing at Center Stage uses chemical-free, azo-free dyes that are tested to be safe for sensitive and reactive skin. Our fabrics — 180 GSM premium cotton and milk fabric — are free from harsh chemicals and skin irritants."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know the size will fit me?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our adjustable fit system means sizes stop being a guessing game. Most of our pieces feature adjustable knots, belts, or ties that let you customize the fit to your exact shape — after purchase, at home, without needing to return anything."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How should I wash and care for the fabric?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Machine wash cold on a gentle cycle, or hand wash in cool water. Our colorfast dyes mean the colours stay vibrant wash after wash. Avoid high heat. Lay flat to dry for best results."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is your return policy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We offer a 15-day return window from the date of delivery. If your piece doesn't work for you, reach out to us and we'll make it right. Most sizing issues can be resolved with our adjustable fit features before initiating a return."
-          }
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Center Stage | Quiet Power</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#7e2738",
+                        "surface": "#fcf9f1",
+                        "on-surface": "#1c1c17",
+                        "secondary": "#3d4b54",
+                        "on-surface-variant": "#554244",
+                        "outline-variant": "#dbc0c2",
+                        "air-blue": "#E3F2FD",
+                        "spotlight-aqua": "#E0F7FA",
+                        "curtain-rose": "#FCE4EC"
+                    },
+                    "borderRadius": {
+                        "brand": "16px"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "margin-site": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body": ["Manrope"],
+                        "serif": ["Noto Serif"],
+                        "display": ["Noto Serif"]
+                    }
+                },
+            },
         }
-      ]
-    }
     </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+        }
 
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
+        .fade-in {
+            animation: fadeIn 1.2s ease-out;
+        }
 
-  <body>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-    <!-- ═══════════════════════════════════════════════════
-         HEADER (Sticky)
-    ════════════════════════════════════════════════════ -->
-    <header id="site-header" class="w-full py-4">
-      <div class="container flex items-center justify-between">
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
 
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2" aria-label="Center Stage home">
-          <img src="/logo-wordmark-white.jpg" alt="Center Stage" class="h-8 object-contain" id="header-logo" />
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav
+        class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-2xl border-b border-stone-200/30 flex justify-between items-center px-8 md:px-16 py-6">
+        <a href="index.html"
+            class="text-2xl font-serif tracking-[0.2em] text-zinc-900 uppercase flex items-center gap-3">
+            <img src="Center Stage assets/Logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Icon" class="w-8 h-8">
+            Centerstage
         </a>
-
+        
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8 font-body text-sm font-semibold" aria-label="Main navigation">
-          <a href="https://centerstage.store/collections/new-arrivals" class="nav-link hover:text-rose transition-colors">New Arrivals</a>
-          <a href="#bestsellers" class="nav-link hover:text-rose transition-colors">Bestsellers</a>
-          <a href="#brand-story" class="nav-link hover:text-rose transition-colors">Our Story</a>
-          <a href="https://centerstage.store/pages/track-order" class="nav-link hover:text-rose transition-colors">Track Order</a>
-        </nav>
-
-        <!-- Right icons -->
-        <div class="flex items-center gap-4">
-          <!-- Cart -->
-          <a href="https://centerstage.store/cart" aria-label="Cart" class="nav-link relative">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 9M17 13l2.3 9M9 21h6" />
-            </svg>
-          </a>
-          <!-- Hamburger (mobile) -->
-          <button id="menu-toggle" class="md:hidden nav-link" aria-label="Open menu" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+        <div class="hidden md:flex gap-x-8">
+            <a href="index.html"
+                class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-900 border-b border-zinc-900 pb-1">Home</a>
+            <a href="about.html"
+                class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">About</a>
+            <a href="material.html"
+                class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">Material</a>
+            <a href="contact.html"
+                class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">Contact</a>
         </div>
-      </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="flex-col gap-6 py-6 px-6 bg-page border-t border-border font-body font-semibold text-base" role="dialog" aria-label="Mobile navigation">
-        <a href="https://centerstage.store/collections/new-arrivals" class="block">New Arrivals</a>
-        <a href="#bestsellers" class="block">Bestsellers</a>
-        <a href="#brand-story" class="block">Our Story</a>
-        <a href="https://centerstage.store/pages/track-order" class="block">Track Order</a>
-      </div>
-    </header>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 1: Hero
-    ════════════════════════════════════════════════════ -->
-    <section id="hero">
-      <!-- Background image — replaced by AI-generated cs-hero-a.jpg -->
-      <img
-        src="/images/cs-hero-a.jpg"
-        alt="A confident Indian woman wearing a Center Stage premium cotton dress"
-        class="hero-bg"
-        loading="eager"
-        fetchpriority="high"
-        onerror="this.style.display='none'"
-      />
-      <!-- Fallback color when image pending -->
-      <div style="position:absolute;inset:0;background:#1C4E6D;z-index:0;" id="hero-fallback"></div>
-      <div class="hero-overlay"></div>
-
-      <div class="container hero-content pb-8 md:pb-16">
-        <h1 class="mb-4 leading-tight">Stand Out Every Day.</h1>
-        <p class="text-lg md:text-xl mb-8 text-white/90 font-body font-medium max-w-md">
-          180 GSM premium cotton &nbsp;·&nbsp; Adjustable knots &amp; belts &nbsp;·&nbsp; Chemical-free dyes
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 flex-wrap">
-          <a href="https://centerstage.store/collections/all" class="btn-primary w-full sm:w-auto">
-            Shop The Collection
-          </a>
-          <a href="#bestsellers" class="btn-ghost w-full sm:w-auto border-white text-white hover:bg-white hover:text-rose" style="border-color:rgba(255,255,255,0.7)">
-            See What's Hot ↓
-          </a>
+        <div class="flex items-center gap-6">
+            <a href="https://centerstage.store/"
+                class="hidden md:block px-6 py-2 bg-primary text-white font-serif text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">Buy
+                Now</a>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden text-zinc-900">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
         </div>
-      </div>
-    </section>
 
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 2: Trust Bar
-    ════════════════════════════════════════════════════ -->
-    <div id="trust-bar" role="list" aria-label="Trust signals">
-      <div class="trust-inner">
-        <div class="flex items-center gap-2 shrink-0 font-body text-sm font-semibold text-muted" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8l1 12h12L19 8" />
-          </svg>
-          Free Shipping over ₹2,500
-        </div>
-        <div class="flex items-center gap-2 shrink-0 font-body text-sm font-semibold text-muted" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-          </svg>
-          Cash on Delivery Available
-        </div>
-        <div class="flex items-center gap-2 shrink-0 font-body text-sm font-semibold text-muted" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 21l9-18 9 18M9 14h6" />
-          </svg>
-          Made in India, With Pride
-        </div>
-        <div class="flex items-center gap-2 shrink-0 font-body text-sm font-semibold text-muted" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-rose shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3l4 4-4 4m8-8l4 4-4 4M3 12s4-4 9-4 9 4 9 4-4 4-9 4-9-4-9-4z" />
-          </svg>
-          Safe for Sensitive Skin
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 3: Brand Story
-    ════════════════════════════════════════════════════ -->
-    <section id="brand-story" class="section bg-page">
-      <div class="container">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-
-          <!-- Image -->
-          <div class="order-2 md:order-1">
-            <img
-              src="/images/cs-fabric-knot.jpg"
-              alt="Close-up of the adjustable knot detail on a Center Stage premium cotton top"
-              class="story-img w-full"
-              loading="lazy"
-              style="background:#e8e0d8;"
-              onerror="this.style.background='#e8e0d8';this.style.minHeight='420px'"
-            />
-          </div>
-
-          <!-- Copy -->
-          <div class="order-1 md:order-2">
-            <p class="label-sm mb-4">The Center Stage Difference</p>
-            <h2 class="mb-6">Clothes That Fit You.<br/>Not The Other Way Around.</h2>
-            <div class="text-muted space-y-4 leading-relaxed">
-              <p>At Center Stage, we believe getting dressed shouldn't be a compromise. That's why every piece in our collection is built on three non-negotiables: premium materials, adjustable fit, and skin-safe craftsmanship.</p>
-              <p>Our fabrics start with 180 GSM premium cotton and soft milk fabric — chosen because they breathe, move, and wear beautifully over time, not just on the first wash. Every dye we use is chemical-free and colorfast, making our clothing genuinely safe for sensitive skin.</p>
-              <p>The adjustable fit is our signature. With thoughtfully placed knots, belts, and ties, you shape each piece to your body — not the other way around. No returns for "it doesn't fit." Just confidence.</p>
-              <p>Center Stage is sustainable clothing designed in India, for Indian women. For the professional. The mother. The woman who walks into every room and owns it.</p>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-surface z-[60] translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-16">
+                <span class="text-xl font-serif tracking-[0.2em] text-zinc-900 uppercase">Menu</span>
+                <button id="mobile-menu-close" class="text-zinc-900">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
             </div>
-            <a href="https://centerstage.store/pages/about" class="inline-block mt-8 font-body font-semibold text-rose hover:underline">
-              Explore Our Materials →
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 4: Bestsellers
-    ════════════════════════════════════════════════════ -->
-    <section id="bestsellers" class="section" style="background:#f0ece6;">
-      <div class="container">
-        <div class="text-center mb-10">
-          <h2 class="mb-3">What's Hot Right Now</h2>
-          <p class="text-muted font-body">The pieces our customers reorder. Loved by 1,000+ women across India.</p>
-        </div>
-
-        <!-- Bundle upsell banner -->
-        <div class="bg-rose text-white text-center font-body text-sm font-semibold py-3 px-4 rounded-sm mb-8">
-          Buy any 2 — get ₹300 off &nbsp;|&nbsp; Buy 3 — get ₹600 off
-        </div>
-
-        <!-- Product grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-
-          <!-- Product Card 1 -->
-          <a href="https://centerstage.store/collections/all" class="product-card block">
-            <img
-              src="/images/cs-product-dress-1.jpg"
-              alt="Center Stage belted midi dress — premium cotton"
-              loading="lazy"
-              style="background:#d8d0c8;"
-              onerror="this.style.background='#d8d0c8';this.style.minHeight='280px'"
-            />
-            <div class="p-4">
-              <h3 class="text-base font-heading font-semibold mb-1">Belted Midi Dress</h3>
-              <p class="text-muted font-body text-sm">₹1,799</p>
+            <div class="flex flex-col gap-8">
+                <a href="index.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-900">Home</a>
+                <a href="about.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">About</a>
+                <a href="material.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Material</a>
+                <a href="contact.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Contact</a>
             </div>
-          </a>
-
-          <!-- Product Card 2 -->
-          <a href="https://centerstage.store/collections/all" class="product-card block">
-            <img
-              src="/images/cs-product-dress-2.jpg"
-              alt="Center Stage shirt dress with adjustable belt"
-              loading="lazy"
-              style="background:#c8c4bc;"
-              onerror="this.style.background='#c8c4bc';this.style.minHeight='280px'"
-            />
-            <div class="p-4">
-              <h3 class="text-base font-heading font-semibold mb-1">Leslie Shirt Dress</h3>
-              <p class="text-muted font-body text-sm">₹1,999</p>
+            <div class="mt-auto">
+                <a href="https://centerstage.store/" class="block text-center py-4 bg-primary text-white font-serif text-sm tracking-widest uppercase">Shop the Collection</a>
             </div>
-          </a>
-
-          <!-- Product Card 3 -->
-          <a href="https://centerstage.store/collections/all" class="product-card block">
-            <img
-              src="/images/cs-product-top-1.jpg"
-              alt="Center Stage cotton top with adjustable knot"
-              loading="lazy"
-              style="background:#e0d8d0;"
-              onerror="this.style.background='#e0d8d0';this.style.minHeight='280px'"
-            />
-            <div class="p-4">
-              <h3 class="text-base font-heading font-semibold mb-1">Knot-Detail Cotton Top</h3>
-              <p class="text-muted font-body text-sm">₹1,299</p>
-            </div>
-          </a>
-
-          <!-- Product Card 4 -->
-          <a href="https://centerstage.store/collections/all" class="product-card block">
-            <img
-              src="/images/cs-product-top-2.jpg"
-              alt="Center Stage flutter-sleeve wrap top"
-              loading="lazy"
-              style="background:#e8e4dc;"
-              onerror="this.style.background='#e8e4dc';this.style.minHeight='280px'"
-            />
-            <div class="p-4">
-              <h3 class="text-base font-heading font-semibold mb-1">Flutter-Sleeve Wrap Top</h3>
-              <p class="text-muted font-body text-sm">₹1,199</p>
-            </div>
-          </a>
-
         </div>
+    </nav>
 
-        <div class="text-center mt-10">
-          <a href="https://centerstage.store/collections/all" class="btn-ghost">
-            View All Bestsellers →
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 5: Shop by Vibe
-    ════════════════════════════════════════════════════ -->
-    <section id="shop-by-vibe" class="section bg-page">
-      <div class="container">
-        <p class="label-sm text-center mb-8">Shop by Vibe</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-
-          <!-- Dresses -->
-          <a href="https://centerstage.store/collections/dresses" class="vibe-tile block" aria-label="Shop Dresses">
-            <img
-              src="/images/cs-vibe-dresses.jpg"
-              alt="Woman wearing a Center Stage premium cotton dress"
-              loading="lazy"
-              style="background:#1C4E6D;"
-              onerror="this.style.background='#1C4E6D'"
-            />
-            <div class="tile-overlay">
-              <h3 class="font-heading text-xl font-semibold mb-1">Dresses</h3>
-              <span class="font-body text-sm font-semibold opacity-90">Shop Dresses →</span>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[90vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="Center Stage assets/images/cs-hero-a.jpg" alt="Hero"
+                    class="w-full h-full object-cover object-top">
+                <div class="absolute inset-0 hero-gradient z-10"></div>
             </div>
-          </a>
-
-          <!-- Tees & Tops -->
-          <a href="https://centerstage.store/collections/tops" class="vibe-tile block" aria-label="Shop Tees &amp; Tops">
-            <img
-              src="/images/cs-vibe-tops.jpg"
-              alt="Woman wearing a Center Stage cotton top with knot detail"
-              loading="lazy"
-              style="background:#A24053;"
-              onerror="this.style.background='#A24053'"
-            />
-            <div class="tile-overlay">
-              <h3 class="font-heading text-xl font-semibold mb-1">Tees &amp; Tops</h3>
-              <span class="font-body text-sm font-semibold opacity-90">Shop Tops →</span>
+            <div class="container mx-auto px-8 md:px-16 relative z-20 fade-in">
+                <div class="max-w-2xl">
+                    <h1 class="font-serif text-6xl md:text-8xl text-white mb-6">For Women Who Understand Quiet Power
+                    </h1>
+                    <p class="font-body text-xl text-stone-200 mb-10 tracking-widest uppercase">Premium fits for the
+                        modern woman.</p>
+                    <a href="https://centerstage.store/"
+                        class="inline-block px-10 py-4 bg-white text-primary font-serif text-xs tracking-widest uppercase hover:bg-stone-100 transition-colors">
+                        Shop the Edit
+                    </a>
+                </div>
             </div>
-          </a>
+        </section>
 
-          <!-- Bottoms -->
-          <a href="https://centerstage.store/collections/bottoms" class="vibe-tile block" aria-label="Shop Bottoms">
-            <img
-              src="/images/cs-vibe-bottoms.jpg"
-              alt="Woman wearing Center Stage premium cotton bottoms"
-              loading="lazy"
-              style="background:#22524D;"
-              onerror="this.style.background='#22524D'"
-            />
-            <div class="tile-overlay">
-              <h3 class="font-heading text-xl font-semibold mb-1">Bottoms</h3>
-              <span class="font-body text-sm font-semibold opacity-90">Shop Bottoms →</span>
+        <!-- Philosophy Section -->
+        <section class="py-section-padding bg-white">
+            <div class="container mx-auto px-8 text-center max-w-4xl fade-in">
+                <span class="font-serif text-xs tracking-[0.3em] text-primary mb-6 block uppercase">THE PHILOSOPHY</span>
+                <h2 class="font-serif text-5xl mb-10 text-on-surface">Quiet Power.</h2>
+                <p class="font-body text-xl text-secondary leading-relaxed mb-12">
+                    Quiet Power is not about being noticed; it’s about being remembered. It’s the intentionality in every seam, the choice of fabrics that respect your skin, and the fit that allows you to move with unshakeable confidence.
+                </p>
+                <div class="grid md:grid-cols-2 gap-16 items-center text-left mb-12">
+                    <div>
+                        <h3 class="font-serif text-2xl mb-4">The Milk Cotton Standard</h3>
+                        <p class="font-body text-stone-600 leading-relaxed">
+                            Our obsession with <strong>Milk Cotton</strong>-a sustainable fabric made from milk protein-is at the heart of Center Stage. As soft as silk, as breathable as air, and naturally skin-friendly. It’s a second skin for the woman who moves beautifully between moments.
+                        </p>
+                    </div>
+                    <div class="rounded-brand overflow-hidden shadow-xl">
+                        <img src="Center Stage assets/images/cs-fabric-milk-cotton.png" alt="Milk Cotton Detail" class="w-full h-auto">
+                    </div>
+                </div>
+                <div class="flex justify-center gap-16 border-t border-stone-100 pt-12">
+                    <div class="flex flex-col items-center gap-4">
+                        <span class="material-symbols-outlined text-4xl text-primary">spa</span>
+                        <span class="font-serif text-[10px] tracking-widest uppercase">Silk-Soft</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <span class="material-symbols-outlined text-4xl text-primary">air</span>
+                        <span class="font-serif text-[10px] tracking-widest uppercase">High Breathability</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-4">
+                        <span class="material-symbols-outlined text-4xl text-primary">eco</span>
+                        <span class="font-serif text-[10px] tracking-widest uppercase">Bio-Regenerative</span>
+                    </div>
+                </div>
             </div>
-          </a>
+        </section>
 
-        </div>
-      </div>
-    </section>
+        <!-- Lifestyle Card Gallery -->
+        <section class="py-section-padding bg-stone-50 overflow-hidden">
+            <div class="container mx-auto px-8 md:px-16">
+                <div class="max-w-2xl mb-16 fade-in">
+                    <span class="font-serif text-xs tracking-[0.3em] text-primary mb-4 block uppercase">LIFESTYLE</span>
+                    <h2 class="font-serif text-5xl mb-6">For the Places Your Day Takes You.</h2>
+                    <p class="font-body text-lg text-secondary">Center Stage pieces are made for all the moments that make your day.</p>
+                </div>
 
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 6: Social Proof
-    ════════════════════════════════════════════════════ -->
-    <section id="social-proof" class="section" style="background:#f0ece6;">
-      <div class="container">
-        <div class="text-center mb-10">
-          <h2 class="mb-3">Worn and Loved</h2>
-          <p class="text-muted font-body">Real women. Real fit. Real reviews.</p>
-        </div>
-
-        <div class="reviews-track">
-
-          <!-- Review 1 -->
-          <div class="review-card">
-            <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
-              <span class="text-rose text-lg" aria-hidden="true">★★★★★</span>
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Card 1 -->
+                    <div class="group relative aspect-[3/4] overflow-hidden rounded-brand shadow-lg hover:shadow-2xl transition-all duration-500 fade-in" style="animation-delay: 0.1s;">
+                        <img src="Center Stage assets/images/cs-lifestyle-work.png" alt="Work" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-xl mb-2">Informal Workdays</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Composed & Comfortable</p>
+                            <p class="text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">Polished enough for work. Comfortable enough for the whole day.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="group relative aspect-[3/4] overflow-hidden rounded-brand shadow-lg hover:shadow-2xl transition-all duration-500 fade-in" style="animation-delay: 0.2s;">
+                        <img src="Center Stage assets/images/cs-lifestyle-coffee.png" alt="Coffee" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-xl mb-2">Coffee & Meetings</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Effortless & Presentable</p>
+                            <p class="text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">Easy polish for conversations that matter.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="group relative aspect-[3/4] overflow-hidden rounded-brand shadow-lg hover:shadow-2xl transition-all duration-500 fade-in" style="animation-delay: 0.3s;">
+                        <img src="Center Stage assets/images/cs-vibe-dresses.jpg" alt="Brunch" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-xl mb-2">Brunches & Plans</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Relaxed & Refined</p>
+                            <p class="text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">For days when comfort matters, but so does looking put together.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="group relative aspect-[3/4] overflow-hidden rounded-brand shadow-lg hover:shadow-2xl transition-all duration-500 fade-in" style="animation-delay: 0.4s;">
+                        <img src="Center Stage assets/images/cs-lifestyle-travel.png" alt="Travel" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-xl mb-2">Travel & Errands</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Movement & Ease</p>
+                            <p class="text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">Comfort that stays with you, no matter the journey.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="group relative aspect-[3/4] overflow-hidden rounded-brand shadow-lg hover:shadow-2xl transition-all duration-500 fade-in" style="animation-delay: 0.5s;">
+                        <img src="Center Stage assets/images/cs-ugc-1.jpg" alt="Everyday" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="font-serif text-xl mb-2">Everyday Moments</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-stone-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Considered Dressing</p>
+                            <p class="text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">Because everyday dressing deserves more thought.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <blockquote class="font-body text-sm leading-relaxed text-muted mb-4">
-              "I was skeptical about buying online but the adjustable knot on the top made all the difference. It fits perfectly and the fabric is so soft. Already ordered two more."
-            </blockquote>
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-semibold text-sm">P</div>
-              <div>
-                <p class="font-semibold text-sm font-body">Priya R.</p>
-                <p class="text-xs text-muted font-body">Mumbai</p>
-              </div>
+        </section>
+
+        <!-- Moments Grid -->
+        <section class="py-section-padding bg-surface">
+            <div class="container mx-auto px-8 md:px-16">
+                <div class="flex justify-between items-end mb-16">
+                    <h2 class="font-serif text-4xl">Live Every Moment.</h2>
+                    <a href="https://centerstage.store/"
+                        class="font-serif text-xs tracking-widest border-b border-primary text-primary pb-1 uppercase">Explore
+                        All</a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="group fade-in" style="animation-delay: 0.1s;">
+                        <div class="aspect-[3/4] overflow-hidden mb-6 rounded-brand">
+                            <img src="Center Stage assets/images/cs-lifestyle-work.png" alt="Work"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2">Work</h3>
+                        <p class="font-body text-secondary text-sm">Clean, structured pieces for a sharp presence.</p>
+                    </div>
+                    <div class="group fade-in" style="animation-delay: 0.2s;">
+                        <div class="aspect-[3/4] overflow-hidden mb-6 rounded-brand">
+                            <img src="Center Stage assets/images/cs-lifestyle-coffee.png" alt="Coffee"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2">Coffee</h3>
+                        <p class="font-body text-secondary text-sm">Easy polish for conversations that matter.</p>
+                    </div>
+                    <div class="group fade-in" style="animation-delay: 0.3s;">
+                        <div class="aspect-[3/4] overflow-hidden mb-6 rounded-brand">
+                            <img src="Center Stage assets/images/cs-lifestyle-travel.png" alt="Travel"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2">Travel</h3>
+                        <p class="font-body text-secondary text-sm">Packable, wrinkle-resistant styles for the move.</p>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <!-- Review 2 -->
-          <div class="review-card">
-            <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
-              <span class="text-rose text-lg" aria-hidden="true">★★★★★</span>
+        <!-- Fabric Philosophy -->
+        <section class="py-section-padding bg-zinc-900 text-stone-50 overflow-hidden relative">
+            <div class="container mx-auto px-8 md:px-16 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in">
+                        <h2 class="font-serif text-5xl mb-8">Fabric First.</h2>
+                        <p class="font-body text-lg text-stone-400 mb-10 leading-relaxed">
+                            We believe that luxury is felt, not seen. Our obsession with natural fibers-pure cotton and
+                            bio-washed softness-ensures that every piece feels as exquisite as it looks.
+                        </p>
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-4">
+                                <span class="w-12 h-px bg-primary"></span>
+                                <span class="font-serif text-[10px] tracking-widest uppercase">100% Premium
+                                    Cotton</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="w-12 h-px bg-primary"></span>
+                                <span class="font-serif text-[10px] tracking-widest uppercase">Bio-washed
+                                    Softness</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="w-12 h-px bg-primary"></span>
+                                <span class="font-serif text-[10px] tracking-widest uppercase">Pre-shrunk for
+                                    Life</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative flex justify-end fade-in" style="animation-delay: 0.2s;">
+                        <img src="Center Stage assets/images/cs-fabric-texture.jpg" alt="Fabric"
+                            class="w-4/5 h-auto rounded-brand grayscale opacity-80">
+                    </div>
+                </div>
             </div>
-            <blockquote class="font-body text-sm leading-relaxed text-muted mb-4">
-              "Finally a brand that understands that not all women are a standard size S. The belt on the dress lets me adjust it exactly to my shape. Stunning quality."
-            </blockquote>
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-semibold text-sm">A</div>
-              <div>
-                <p class="font-semibold text-sm font-body">Anjali M.</p>
-                <p class="text-xs text-muted font-body">Bengaluru</p>
-              </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-section-padding text-center bg-white fade-in">
+            <div class="container max-w-lg mx-auto">
+                <h2 class="font-serif text-5xl mb-8">Live Your Moment.</h2>
+                <a href="https://centerstage.store/"
+                    class="inline-block px-12 py-5 bg-primary text-white font-serif text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">
+                    Shop the Collection
+                </a>
             </div>
-          </div>
+        </section>
+    </main>
 
-          <!-- Review 3 -->
-          <div class="review-card">
-            <div class="flex gap-1 mb-4" aria-label="5 out of 5 stars">
-              <span class="text-rose text-lg" aria-hidden="true">★★★★★</span>
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-stone-400 py-20 px-8 md:px-24">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1">
+                <span class="text-xl font-serif tracking-[0.3em] text-stone-50 uppercase">Centerstage</span>
+                <p class="mt-6 text-[10px] tracking-widest uppercase leading-relaxed">
+                    © 2026 Centerstage. Defined by understated elegance.
+                </p>
             </div>
-            <blockquote class="font-body text-sm leading-relaxed text-muted mb-4">
-              "I've washed it five times and the colour hasn't faded at all. That's rare. The fabric genuinely feels premium. Center Stage has earned a permanent spot in my wardrobe."
-            </blockquote>
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-semibold text-sm">K</div>
-              <div>
-                <p class="font-semibold text-sm font-body">Kavitha S.</p>
-                <p class="text-xs text-muted font-body">Hyderabad</p>
-              </div>
+            <div>
+                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Discover</h4>
+                <ul class="flex flex-col gap-4 text-[10px] tracking-widest uppercase">
+                    <li><a href="about.html" class="hover:text-stone-50 transition-colors">About</a></li>
+                    <li><a href="material.html" class="hover:text-stone-50 transition-colors">Material</a></li>
+                    <li><a href="contact.html" class="hover:text-stone-50 transition-colors">Contact</a></li>
+                </ul>
             </div>
-          </div>
-
+            <div>
+                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Assistance</h4>
+                <ul class="flex flex-col gap-4 text-[10px] tracking-widest uppercase">
+                    <li><a href="#" class="hover:text-stone-50 transition-colors">Shipping</a></li>
+                    <li><a href="#" class="hover:text-stone-50 transition-colors">Returns</a></li>
+                    <li><a href="#" class="hover:text-stone-50 transition-colors">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Connect</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-stone-50 transition-colors"><span
+                            class="material-symbols-outlined">public</span></a>
+                    <a href="#" class="hover:text-stone-50 transition-colors"><span
+                            class="material-symbols-outlined">photo_camera</span></a>
+                    <a href="#" class="hover:text-stone-50 transition-colors"><span
+                            class="material-symbols-outlined">mail</span></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 7: FAQ
-    ════════════════════════════════════════════════════ -->
-    <section id="faq" class="section bg-page">
-      <div class="container max-w-3xl mx-auto">
-        <h2 class="text-center mb-12">Your Questions, Answered</h2>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Is the fabric safe for sensitive skin?
-            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
-          </button>
-          <div class="faq-answer">
-            Yes. Every piece of clothing at Center Stage uses chemical-free, azo-free dyes that are tested to be safe for sensitive and reactive skin. Our fabrics — 180 GSM premium cotton and milk fabric — are free from harsh chemicals and skin irritants. We wouldn't put anything on your body that we wouldn't put on ours.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            How do I know the size will fit me?
-            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
-          </button>
-          <div class="faq-answer">
-            Our adjustable fit system is designed so that sizes stop being a guessing game. Most of our pieces feature adjustable knots, belts, or ties that let you customize the fit to your exact shape — after purchase, at home, without needing to return anything. Our size guide is available on every product page with detailed measurements.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            How should I wash and care for the fabric?
-            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
-          </button>
-          <div class="faq-answer">
-            Machine wash cold on a gentle cycle, or hand wash in cool water. Our colorfast dyes mean the colours stay vibrant wash after wash — no fading, no bleeding. Avoid high heat. Lay flat to dry for best results. These clothes are built to last.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            What is your return policy?
-            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
-          </button>
-          <div class="faq-answer">
-            We offer a 15-day return window from the date of delivery. If for any reason your piece doesn't work for you, reach out to us and we'll make it right. Most sizing issues can be resolved with our adjustable fit features before initiating a return — our team is happy to help.
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════
-         FOOTER
-    ════════════════════════════════════════════════════ -->
-    <footer class="bg-blue text-white">
-      <div class="container py-16">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
-
-          <!-- Brand -->
-          <div class="md:col-span-1">
-            <img src="/logo-wordmark-white.jpg" alt="Center Stage" class="h-7 mb-4 object-contain" />
-            <p class="font-body text-sm text-white/70 leading-relaxed mb-5">
-              Premium, adjustable-fit clothing made for confident Indian women. Made in India, with care.
-            </p>
-            <a href="https://www.instagram.com/centerstage.store" target="_blank" rel="noopener" aria-label="Center Stage on Instagram" class="inline-block text-white/70 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.9 4.9 0 011.772 1.153 4.9 4.9 0 011.153 1.772c.163.46.35 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.9 4.9 0 01-1.153 1.772 4.9 4.9 0 01-1.772 1.153c-.46.163-1.26.35-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.9 4.9 0 01-1.772-1.153A4.9 4.9 0 012.566 19.43c-.163-.46-.35-1.26-.403-2.43C2.105 15.734 2.093 15.354 2.093 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.9 4.9 0 013.72 2.948 4.9 4.9 0 015.492 1.795c.46-.163 1.26-.35 2.43-.403C9.188 2.175 9.568 2.163 12 2.163zm0 1.802c-3.162 0-3.532.012-4.78.07-1.07.048-1.65.22-2.037.365a3.1 3.1 0 00-1.15.747 3.1 3.1 0 00-.747 1.15c-.145.387-.317.967-.365 2.037-.058 1.248-.07 1.618-.07 4.78s.012 3.532.07 4.78c.048 1.07.22 1.65.365 2.037.18.468.43.868.747 1.15.282.317.682.567 1.15.747.387.145.967.317 2.037.365 1.248.058 1.618.07 4.78.07s3.532-.012 4.78-.07c1.07-.048 1.65-.22 2.037-.365a3.1 3.1 0 001.15-.747 3.1 3.1 0 00.747-1.15c.145-.387.317-.967.365-2.037.058-1.248.07-1.618.07-4.78s-.012-3.532-.07-4.78c-.048-1.07-.22-1.65-.365-2.037a3.1 3.1 0 00-.747-1.15 3.1 3.1 0 00-1.15-.747c-.387-.145-.967-.317-2.037-.365-1.248-.058-1.618-.07-4.78-.07zm0 3.063a5.035 5.035 0 110 10.07 5.035 5.035 0 010-10.07zm0 1.802a3.233 3.233 0 100 6.466 3.233 3.233 0 000-6.466zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Shop -->
-          <div>
-            <h4 class="font-body font-semibold text-sm mb-4 text-white/50 uppercase tracking-widest">Shop</h4>
-            <ul class="space-y-3 font-body text-sm text-white/80">
-              <li><a href="https://centerstage.store/collections/dresses" class="hover:text-white transition-colors">Dresses</a></li>
-              <li><a href="https://centerstage.store/collections/tops" class="hover:text-white transition-colors">Tees &amp; Tops</a></li>
-              <li><a href="https://centerstage.store/collections/new-arrivals" class="hover:text-white transition-colors">New Arrivals</a></li>
-              <li><a href="https://centerstage.store/collections/bestsellers" class="hover:text-white transition-colors">Bestsellers</a></li>
-            </ul>
-          </div>
-
-          <!-- Help -->
-          <div>
-            <h4 class="font-body font-semibold text-sm mb-4 text-white/50 uppercase tracking-widest">Help</h4>
-            <ul class="space-y-3 font-body text-sm text-white/80">
-              <li><a href="https://centerstage.store/pages/track-order" class="hover:text-white transition-colors">Track Order</a></li>
-              <li><a href="https://centerstage.store/policies/shipping-policy" class="hover:text-white transition-colors">Shipping Policy</a></li>
-              <li><a href="https://centerstage.store/policies/refund-policy" class="hover:text-white transition-colors">Returns &amp; Exchanges</a></li>
-              <li><a href="https://centerstage.store/pages/contact" class="hover:text-white transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <!-- Newsletter -->
-          <div>
-            <h4 class="font-body font-semibold text-sm mb-1 text-white">Join the Community</h4>
-            <p class="font-body text-sm text-white/70 mb-4">Get early access to new drops, styling tips, and members-only offers.</p>
-            <form class="email-row" onsubmit="return false;" aria-label="Newsletter signup">
-              <input type="email" placeholder="Your email address" aria-label="Email address" required />
-              <button type="submit" class="btn-primary text-sm px-4 py-3 shrink-0">Join →</button>
-            </form>
-          </div>
-
-        </div>
-
-        <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 font-body text-xs text-white/50">
-          <span>© 2026 Center Stage. All rights reserved.</span>
-          <div class="flex gap-6">
-            <a href="https://centerstage.store/policies/privacy-policy" class="hover:text-white/80 transition-colors">Privacy Policy</a>
-            <a href="https://centerstage.store/policies/terms-of-service" class="hover:text-white/80 transition-colors">Terms of Service</a>
-          </div>
-        </div>
-      </div>
     </footer>
 
+    <script>
+        // Simple intersection observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    <!-- ═══════════════════════════════════════════════════
-         POPUP: Welcome Discount
-    ════════════════════════════════════════════════════ -->
-    <div id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-heading">
-      <div id="popup-box">
-        <button id="popup-close" aria-label="Close popup">×</button>
-        <p class="label-sm mb-3 text-rose">Exclusive Offer</p>
-        <h2 id="popup-heading" class="font-heading text-2xl font-bold mb-2">Your First Look, On Us.</h2>
-        <p class="font-body text-sm text-muted mb-6">Get 10% off your first order — plus early access to new drops.</p>
-        <form class="email-row" onsubmit="return false;" aria-label="Discount popup email signup">
-          <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
-          <button type="submit" class="btn-primary text-sm px-4 py-3 shrink-0 whitespace-nowrap">Claim My 10% Off →</button>
-        </form>
-        <button class="mt-4 block mx-auto font-body text-xs text-muted hover:underline cursor-pointer bg-none border-none" id="popup-dismiss">
-          No thanks, I'll pay full price
-        </button>
-      </div>
-    </div>
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && menuClose && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            menuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        }
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#9d3f50",
+                    "surface-variant": "#e5e2da",
+                    "on-surface": "#1c1c17",
+                    "surface-container-highest": "#e5e2da",
+                    "surface": "#fcf9f1",
+                    "on-primary-container": "#ffcacf",
+                    "surface-bright": "#fcf9f1",
+                    "outline-variant": "#dbc0c2",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffd9dc",
+                    "tertiary-container": "#645c58",
+                    "on-secondary-container": "#536572",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "on-surface-variant": "#554244",
+                    "on-secondary-fixed-variant": "#374955",
+                    "primary": "#7e2738",
+                    "on-tertiary-fixed": "#201a18",
+                    "on-primary-fixed": "#400012",
+                    "surface-container": "#f1eee6",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#7e2739",
+                    "inverse-on-surface": "#f3f1e9",
+                    "outline": "#887274",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#d0c4bf",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#0a1e29",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#e1d5d0",
+                    "tertiary-fixed": "#ece0db",
+                    "secondary-container": "#cfe2f2",
+                    "surface-container-low": "#f6f3eb",
+                    "on-tertiary-fixed-variant": "#4d4542",
+                    "secondary-fixed-dim": "#b6c9d8",
+                    "primary-container": "#9c3e4f",
+                    "on-background": "#1c1c17",
+                    "secondary-fixed": "#d2e5f4",
+                    "inverse-primary": "#ffb2bb",
+                    "surface-container-high": "#ebe8e0",
+                    "surface-dim": "#dcdad2",
+                    "tertiary": "#4c4541",
+                    "secondary": "#4e616e",
+                    "background": "#fcf9f1",
+                    "inverse-surface": "#31312b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "16px"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "margin-site": "64px",
+                    "unit": "4px",
+                    "section-padding": "120px",
+                    "gutter": "24px",
+                    "stack-sm": "12px",
+                    "stack-md": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .parallax-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-stone-50/80 dark:bg-zinc-900/80 backdrop-blur-2xl border-b border-stone-200/30 dark:border-zinc-800/30 flex justify-between items-center px-8 md:px-16 py-6 w-full">
+<div class="text-2xl font-serif tracking-[0.2em] text-zinc-900 dark:text-stone-50 uppercase">Centerstage</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-stone-50 transition-all duration-300" href="#">Workwear</a>
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-stone-50 transition-all duration-300" href="#">Day-to-Evening</a>
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-stone-50 transition-all duration-300" href="#">Travel</a>
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-stone-50 transition-all duration-300" href="#">Lookbook</a>
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-900 dark:text-stone-50 border-b border-zinc-900 dark:border-stone-50 pb-1" href="#">Fit &amp; Fabric</a>
+<a class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 dark:text-stone-400 hover:text-zinc-900 dark:hover:text-stone-50 transition-all duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="scale-100 active:scale-95 transition-transform"><span class="material-symbols-outlined text-zinc-900 dark:text-stone-50">shopping_bag</span></button>
+<button class="scale-100 active:scale-95 transition-transform"><span class="material-symbols-outlined text-zinc-900 dark:text-stone-50">person</span></button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden px-margin-site py-section-padding">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-90 scale-105" data-alt="Macro close-up of premium linen and silk blend fabric in soft beige, showing intricate weave pattern and soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTRHViRoRQ-rkUaHPx_hHgzsEzRPBIRJyX9VYQ2C8bHpO8pVuaR50yAG6hd7gP6lqcTk53t8GyHjmNQ8r5_M_yX9Vk-_LI_LIxN2hNmAKKOuJ8l1g6ShqNd9JNYvnlYVmITwACVGi2jL7rtuZK_jD_N4_opb8pl8OdcA4URMBuE0tY9JGiY-pEHle4N8yXT5ocmB0gcWXHB2K14hhFvRH7yjCUM144KY1LyJv0encxhU5bjUAUO4Onup_w0J8EE-zrXaTX_o4R4mk"/>
+<div class="absolute inset-0 bg-background/20 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl">
+<span class="font-label-caps text-label-caps text-surface-tint mb-stack-md block">PHILOSOPHY</span>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-stack-lg leading-tight">
+                    What you feel matters as much as what you see.
+                </h1>
+<div class="flex justify-center">
+<div class="w-px h-24 bg-on-surface/20"></div>
+</div>
+</div>
+</section>
+<!-- Fabric Philosophy -->
+<section class="py-section-padding px-margin-site bg-surface">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5 mb-stack-lg md:mb-0">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Natural Heritage</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg leading-relaxed">
+                        Our textile narrative begins with the earth. We focus exclusively on natural fibers-cotton, silk, linen, and wool-chosen for their innate breathability and quiet longevity. 
+                    </p>
+<div class="space-y-stack-md">
+<div class="flex items-center gap-stack-md group">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps">RESPONSIBLE ORIGINS</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Traceable fibers from trusted mills.</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-md group">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">air</span>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps">THERMAL BREATHABILITY</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Natural temperature regulation for every season.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7">
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="pt-24">
+<img class="rounded-full w-full aspect-[3/4] object-cover mb-stack-md" data-alt="Extreme macro of high quality white cotton texture, soft shadows, clean and pure aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2i9xj3g2pdIozG7Tv5TiUL-4NPUm-UCwuIInXM3BPNVp9xxQ6BViXOsvAODuxh3HB88Bkqr6Fzh-8a6PmHrhi3HE-vbtK3aFyqMo7fJNr1SEhEWfSW9iLlsqK1d9m28uMv9S0EYAbukJngdpB5ayOdxvTgPJs-ztILI6BqX9UgGnnnRxyyy25FQ4Q4RRV34jq-T6WH36nqBBKyyvlbMuiQ-R65yxZMKe2KCbiHQ-BKYh7WrngmMJ0Ozlu1nyTEwqVJzJlj50xdww"/>
+<p class="font-label-caps text-label-caps text-center">PURE COTTON</p>
+</div>
+<div>
+<img class="rounded-full w-full aspect-[3/4] object-cover mb-stack-md" data-alt="Draped silk fabric in a muted rose tone, light reflecting off the sheen, elegant folds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF7s8lBTe3jHks2PqYnd_XlaMcq14v1LKDogrz2avZX6fSrYk_RWYhZTe7pSL97nmGu1vb-NUkDi-MzeB-cCfkoeYfAPkB2gm354c-O-Ijl7ZcWK-Dv12P1C3HK9BPi6gUmkPMYaNDsSMlJYOlk982vXADl4FfyUNj3HFXyIzQoN0hpuZaM75yc7XsV1rkaO1fSFYJP-c23FKTO6oxhO4EwNMDe29gdvfzJPdeDoiNRC6WiMJc_viDG9ZMQafMnjKJ8c6_KTnyxxw"/>
+<p class="font-label-caps text-label-caps text-center">MULBERRY SILK</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fit Philosophy: The Signature Fit -->
+<section class="py-section-padding px-margin-site bg-surface-container overflow-hidden">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-section-padding">
+<h2 class="font-headline-lg text-headline-lg mb-stack-sm">Our signature fit is alive.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Clothing designed for the fluid reality of your day.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Diagram Item 1 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-stack-md bg-surface border border-outline-variant p-4">
+<img class="w-full h-full object-cover rounded-full" data-alt="Detailed view of a jacket shoulder with soft padding and precision stitching against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGBpWnTlHGnvz_QVWgH7k3XGqaG-pheWmrQFNk-UdzsWa-OyOEOreUeEIE14jnSDTGgBu9z4D_gd-qiYmKAmtjJpv02Wic1m_mWovCBht6-cCOia9X8rG6pqInpycw-tAKJHkXJ6zms-nocQJeurnQaYDGXbWyr4k-B9oHgjBaS7lnco1OE0ioyI0Us6L8P7dUjhhXK3TMdB9IMYPPf930E178kqMYcIGvaHBqMzzcCQRhNHbVBdtmqsT7721Sj_Gm0KWJyK1KBAQ"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Spacious Shoulders</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineered with internal ease to allow full range of motion without sacrificing silhouette.</p>
+</div>
+<!-- Diagram Item 2 -->
+<div class="relative flex flex-col items-center text-center mt-12 md:mt-24">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-stack-md bg-surface border border-outline-variant p-4">
+<img class="w-full h-full object-cover rounded-full" data-alt="Mid-section of a high-waisted tailored trouser showing refined pleats and waist construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiS0HZcH_G2NR7viMWaXLavKMonSIczwB5NEG_1FpRrBIq9ELT0oxjah3XMKjvXLDLy0k7O9UkhCfUh_AF-DPQmrtmlmAP8x_QK83_Rc19p2hi7cyPZVodsSG7n9a5bkvsE7M3BdT43aWPV8gff75JPXDQX_2_3Z7cIWOx3xsLEhdg3MF2zjpLUXHpZaOOI7J8ylZYhLDuDz-penyI0eZJ9a5LQ9thhcacedKrkC1W_ZO7deWftiVK8WnxeOqG55Nqu7OFNhxxsoY"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Defined Waist</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Strategically tapered to anchor while sitting or bending, ensuring a constant, polished look.</p>
+</div>
+<!-- Diagram Item 3 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-stack-md bg-surface border border-outline-variant p-4">
+<img class="w-full h-full object-cover rounded-full" data-alt="Close up of a shirt sleeve cuff and arm, demonstrating the length and drape of the fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY186tWhqaqoTO-gagGBa0ofhhsMqRBxifoBYh1JQeORiF7IbBna7eJ3Yl154Ua7tcpBVAkNJTrUqX6YhkA5wu9QkR-LxtdcA3LQiHKIwFLKyMjLS28ZOkTnKvDahBwNfFldoI-XlI0G2BqywLsSGahlOIMnmW63i3281Yf8aoU5OdRzf5WLYcqYfqnpBUL2-gMA7BeAoyJhh3GS9wry3e974pLTQvK6ht6A7xgopAGX70mA8CkudDnzWeN80YrwWv3zddezn0aaU"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Stable Sleeves</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Calibrated sleeve-head height prevents the garment from riding up when you reach or move.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Craft Details - Bento Grid Style -->
+<section class="py-section-padding px-margin-site">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-gutter">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-surface-tint">CRAFTSMANSHIP</span>
+<h2 class="font-headline-lg text-headline-lg mt-stack-sm">The invisible architecture of luxury.</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-stack-md h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high rounded-full overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Interior view of a luxury garment showing a clean French seam and silk lining, soft neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhhFb8rrMUf6lX_svLVHjbz9uOlM0i5R9cTW3I0oqfKzmvQPMkHSlwkS_vgocgKw9QX_1kzVG0E3BkziYKpRQd-ZiYdg-r4JvTL03DdiiVfHiFro3g2VSactrMHNe8cGQRk644fd3ipuIAYmdED9CmC6SrbLp5nuklrFF9Yzwd8HLyIpsPPLcdSov47nnazVeVSEj_wUUGi5XE8i2ByWNH69F_MT7MrVMYRoLhC1oqT68hEeTxDJfOmnM6KI0-hyXKRwKUnwOO86E"/>
+<div class="absolute bottom-10 left-10 p-8 glass-effect bg-surface/40 rounded-full max-w-xs">
+<h4 class="font-headline-md text-headline-md mb-stack-sm">French Seams</h4>
+<p class="font-body-md text-body-md text-on-surface">Enclosed seams that are as beautiful on the inside as the outside, preventing fraying and skin irritation.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-low rounded-full overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a custom metal button and brass zipper on premium fabric, sharp focus and shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0VKk2zUBM0GG-pW89IevpnX79KZGQzgogNyVep7aRBRmBcjdxV1LYn4CTL42mvCQwqqnOm7-uOk9Iw2Nnkv7WUcV1dsqCDfGTPtAhH_pNHjuX2IpqqQx9suo4BDAT1f7sKSU7ey2f9En4QGI2x7DTejYpTmI3YCC9-NDR6Ed7c_C6C5An9oLBqie4l0S-qagxvru2XJGIzAbrWP7dzFqd8DeHQEDEAQReRq9SXgGxufvLPEI7snjDaGoaVNCDUK7vTYxEuUPZ1-o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-10">
+<div class="text-white">
+<h4 class="font-headline-md text-headline-md mb-2">Quality Hardware</h4>
+<p class="font-body-md text-body-md opacity-90">Custom-cast accents designed to endure a lifetime of use.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-variant rounded-full flex items-center justify-center p-12 text-center group overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Subtle texture of a fine silk lining fabric, ripples of light and shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBph7A1rRlzgiLQCUbtfiWzOESkjg1Yj6WFmk7BF-9yv1Pjhc6gYdRs4bR24iIkgEsMWhc2BjJxBcxccPFrxdv8lTuzA0Aa0wbXbPMs-Ec60oAQYtuOsRs3Aza5sddz2nMk4NSf0xGjGgo4LOirpnDaX1lMlWolBCw99xFjXy76Fix1JJYmAPgVkqsUxA9Qkq3z4sln1czyUbnEEUtblVW0gdzwyA7LVBXDr-bq2_8caSnn4Ci2DERsAex_OSbNq7AM9-HaDXeCPS8"/>
+</div>
+<div class="relative z-10">
+<h4 class="font-headline-md text-headline-md mb-stack-sm">Thoughtful Lining</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Our linings are never an afterthought. We use breathable cupro and silk to ensure the garment moves with you, never against you.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding px-margin-site bg-surface-tint text-on-primary-container text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-display-xl text-display-xl mb-stack-lg text-white">Experience the difference in every thread.</h2>
+<button class="bg-white text-surface-tint px-12 py-5 rounded-full font-label-caps text-label-caps hover:bg-on-primary-container transition-colors duration-300">
+                    Shop Pieces That Feel Right
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 dark:bg-black w-full rounded-t-full border-t border-zinc-800 grid grid-cols-1 md:grid-cols-4 gap-12 px-8 md:px-24 py-20 w-full">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-serif tracking-[0.3em] text-stone-50 uppercase">Centerstage</div>
+<p class="font-serif text-xs tracking-widest uppercase text-stone-400">© 2024 Centerstage. Defined by understated elegance.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-serif text-stone-300 text-xs tracking-widest uppercase mb-2">Company</h5>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-400 hover:text-stone-50 transition-colors duration-300" href="#">About</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-400 hover:text-stone-50 transition-colors duration-300" href="#">Contact</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-50 font-bold" href="#">Lookbook</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-serif text-stone-300 text-xs tracking-widest uppercase mb-2">Customer Care</h5>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-400 hover:text-stone-50 transition-colors duration-300" href="#">Shipping</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-400 hover:text-stone-50 transition-colors duration-300" href="#">Returns</a>
+<a class="font-serif text-xs tracking-widest uppercase text-stone-400 hover:text-stone-50 transition-colors duration-300" href="#">Privacy</a>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-serif text-stone-300 text-xs tracking-widest uppercase mb-2">Newsletter</h5>
+<div class="flex border-b border-zinc-700 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-stone-50 font-serif text-xs tracking-widest w-full" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="text-stone-400 hover:text-stone-50 transition-colors"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400">public</span>
+<span class="material-symbols-outlined text-stone-400">nest_eco_leaf</span>
+</div>
+</div>
+</footer>
+</body></html>
