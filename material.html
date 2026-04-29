@@ -75,25 +75,26 @@
             </button>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" style="z-index: 9999; background-color: #fcf9f1;" class="fixed inset-0 translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
-            <div class="flex justify-between items-center mb-16">
-                <span class="text-xl font-serif tracking-[0.2em] text-zinc-900 uppercase">Menu</span>
-                <button id="mobile-menu-close" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')" class="text-zinc-900">
-                    <span class="material-symbols-outlined text-3xl">close</span>
-                </button>
-            </div>
-            <div class="flex flex-col gap-8">
-                <a href="index.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Home</a>
-                <a href="about.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">About</a>
-                <a href="material.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-900">Material</a>
-                <a href="contact.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Contact</a>
-            </div>
-            <div class="mt-auto">
-                <a href="https://centerstage.store/" class="block text-center py-4 bg-primary text-white font-serif text-sm tracking-widest uppercase">Shop the Collection</a>
-            </div>
-        </div>
     </nav>
+
+    <!-- Mobile Menu Overlay (outside nav to avoid backdrop-blur stacking context) -->
+    <div id="mobile-menu" style="z-index: 9999; background-color: #fcf9f1;" class="fixed inset-0 translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
+        <div class="flex justify-between items-center mb-16">
+            <span class="text-xl font-serif tracking-[0.2em] text-zinc-900 uppercase">Menu</span>
+            <button id="mobile-menu-close" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')" class="text-zinc-900">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-8">
+            <a href="index.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Home</a>
+            <a href="about.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">About</a>
+            <a href="material.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-900">Material</a>
+            <a href="contact.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Contact</a>
+        </div>
+        <div class="mt-auto">
+            <a href="https://centerstage.store/" class="block text-center py-4 bg-primary text-white font-serif text-sm tracking-widest uppercase">Shop the Collection</a>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
