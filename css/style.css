@@ -857,5 +857,7 @@ p:last-child { margin-bottom: 0; }
     
     .hero-content h1 { font-size: 2.8rem; }
     .section { padding: var(--spacing-xl) 0; }
+    .icon-row { gap: 2rem; justify-content: center; }
+    .feature-img img { height: auto !important; aspect-ratio: 4/5; }
 }
 
