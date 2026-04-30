@@ -9,20 +9,24 @@
 </head>
 <body>
 
+    <div class="announcement-bar">
+        New Arrivals 30% Off
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="Center Stage assets/Logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Center Stage Logo"/>
-                Centerstage
-            </a>
-            <div class="nav-links">
-                <a href="index.html"    class="nav-link">Home</a>
-                <a href="about.html"    class="nav-link">About</a>
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">Homepage</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
                 <a href="material.html" class="nav-link active">Material</a>
-                <a href="contact.html"  class="nav-link">Contact</a>
             </div>
-            <div class="flex items-center nav-cta">
+            <a href="index.html" class="nav-logo">
+                <img src="logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Center Stage Logo"/>
+                center stage
+            </a>
+            <div class="nav-right">
                 <a href="https://centerstage.store/" class="btn btn-primary">Buy Now</a>
             </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
@@ -55,7 +59,7 @@
         <!-- Hero (full-bleed fabric image) -->
         <section class="hero fade-in" style="height:70vh;">
             <div class="hero-bg">
-                <img src="Center Stage assets/images/cs_fabric_texture_closeup.png" alt="Fabric texture — Center Stage material philosophy"/>
+                <img src="images/cs_soft_luxury_fabric.png" alt="Fabric texture — Center Stage material philosophy"/>
                 <div class="hero-overlay" style="background:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.65) 100%);"></div>
             </div>
             <div class="container" style="position:relative;z-index:10;">
@@ -142,13 +146,13 @@
                         </div>
                     </div>
                     <div class="feature-img fade-in-up" style="animation-delay:0.2s;">
-                        <img src="Center Stage assets/images/cs_fabric_drape_study.png" alt="Center Stage natural-origin fabric detail" style="border-radius:var(--radius-sm);width:100%;height:480px;object-fit:cover;"/>
+                        <img src="images/cs_fabric_drape_study.png" alt="Center Stage natural-origin fabric detail" style="border-radius:var(--radius-sm);width:100%;height:480px;object-fit:cover;"/>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bamboo / Natural Fiber Deep Dive -->
+        <!-- Natural Fiber Deep Dive -->
         <section class="section bg-alabaster">
             <div class="container">
                 <div class="editorial-divider fade-in-up">
@@ -157,12 +161,12 @@
 
                 <div class="feature-row reversed fade-in-up" style="gap:var(--spacing-xl);margin-top:var(--spacing-md);">
                     <div class="feature-img">
-                        <img src="Center Stage assets/images/cs_fabric_texture_closeup.png" alt="Natural-origin fabric weave — Center Stage" style="border-radius:var(--radius-sm);width:100%;height:480px;object-fit:cover;"/>
+                        <img src="images/cs_soft_luxury_fabric.png" alt="Natural-origin fabric weave — Center Stage" style="border-radius:var(--radius-sm);width:100%;height:480px;object-fit:cover;"/>
                     </div>
                     <div class="feature-text">
                         <span class="eyebrow">Signature Fabric</span>
-                        <h2 style="margin-bottom:var(--spacing-sm);">The Bamboo Standard.</h2>
-                        <p>Our primary fabric is a refined bamboo-blend, a bio-regenerative material that grows quickly and requires significantly fewer resources than conventional crops. The result is a fiber that is naturally soft, breathable, and gentle on the skin.</p>
+                        <h2 style="margin-bottom:var(--spacing-sm);">The Natural-Origin Standard.</h2>
+                        <p>Our primary fabric is a refined natural-origin blend, a bio-regenerative material sourced with a focus on environmental responsibility. The result is a fiber that is naturally soft, breathable, and gentle on the skin.</p>
                         <p>Available in both knitted and woven constructions, each fabric is selected for its GSM, composition, and suitability to each silhouette, so the fabric always serves the garment, never fights it.</p>
 
                         <div class="icon-row mt-md" style="justify-content:flex-start;padding-top:var(--spacing-md);border-top:1px solid rgba(0,0,0,0.06);">
@@ -232,34 +236,46 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <span class="footer-brand-name">Centerstage</span>
-                    <p class="footer-tagline">© 2026 Centerstage.<br/>Defined by understated elegance.</p>
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: var(--spacing-md); display: inline-flex;">
+                        <img src="logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Center Stage Logo" style="height: 32px;"/>
+                        <span style="font-size: 1.2rem; font-weight: 500;">center stage</span>
+                    </a>
                 </div>
                 <div class="footer-col">
-                    <h4>Discover</h4>
+                    <h4>Customer Service</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="material.html">Material</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Assistance</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Returns & Cancellation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Connect</h4>
                     <div class="footer-social">
-                        <a href="#" aria-label="Website"><span class="material-symbols-outlined">public</span></a>
+                        <a href="#" aria-label="Globe"><span class="material-symbols-outlined">public</span></a>
                         <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
-                        <a href="mailto:sarita@centerstage.store" aria-label="Email"><span class="material-symbols-outlined">mail</span></a>
+                        <a href="#" aria-label="Share"><span class="material-symbols-outlined">share</span></a>
                     </div>
                 </div>
+                <div class="footer-col">
+                    <h4>Benefits</h4>
+                    <ul class="footer-benefits">
+                        <li>15 days return policy*</li>
+                        <li>Cash on delivery*</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Center Stage. All rights reserved.</p>
             </div>
         </div>
     </footer>
