@@ -530,13 +530,29 @@ p:last-child { margin-bottom: 0; }
     padding-top: var(--spacing-lg);
     border-top: 1px solid rgba(0,0,0,0.06);
 }
-.icon-item { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-.icon-item .material-symbols-outlined { font-size: 2.2rem; color: var(--color-aqua-dark); }
+.icon-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.75rem; 
+    text-align: center;
+    flex: 0 0 120px; /* Fixed width to align columns when wrapping */
+}
+.icon-item .material-symbols-outlined { 
+    font-size: 2.2rem; 
+    color: var(--color-aqua-dark); 
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .icon-label {
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-weight: 500;
+    line-height: 1.4;
+    max-width: 100%;
 }
 
 /* ---- Three-Col USP Grid ---- */
@@ -857,7 +873,13 @@ p:last-child { margin-bottom: 0; }
     
     .hero-content h1 { font-size: 2.8rem; }
     .section { padding: var(--spacing-xl) 0; }
-    .icon-row { gap: 2rem; justify-content: center; }
+    .icon-row { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-content: center; 
+    }
+    .icon-item { flex: 1; }
     .feature-img img { height: auto !important; aspect-ratio: 4/5; }
 }
 
