@@ -1,209 +1,177 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Contact | Centerstage</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary": "#7e2738",
-                        "surface": "#fcf9f1",
-                        "on-surface": "#1c1c17",
-                        "secondary": "#3d4b54",
-                        "on-surface-variant": "#554244",
-                        "outline-variant": "#dbc0c2"
-                    },
-                    "borderRadius": {
-                        "brand": "16px"
-                    },
-                    "spacing": {
-                        "section-padding": "120px",
-                        "stack-sm": "12px",
-                        "stack-md": "24px",
-                        "stack-lg": "48px",
-                        "margin-site": "64px"
-                    },
-                    "fontFamily": {
-                        "body": ["Manrope"],
-                        "serif": ["Noto Serif"]
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        .fade-in { animation: fadeIn 1.2s ease-out; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #mobile-menu {
-            background-color: #fcf9f1 !important;
-            opacity: 1 !important;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact | Center Stage</title>
+    <meta name="description" content="Connect with Center Stage. Whether it's a fit, fabric, or styling question — we're here to help you choose better."/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-white">
+<body>
 
     <!-- Navigation -->
-    <nav class="sticky top-0 w-full z-50 bg-stone-50/80 backdrop-blur-2xl border-b border-stone-200/30 flex justify-between items-center px-8 md:px-16 py-6">
-        <a href="index.html" class="text-2xl font-serif tracking-[0.2em] text-zinc-900 uppercase flex items-center gap-3">
-            <img src="../Center Stage assets/Logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Icon" class="w-8 h-8">
-            Centerstage
-        </a>
-        
-        <!-- Desktop Nav -->
-        <div class="hidden md:flex gap-x-8">
-            <a href="index.html" class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">Home</a>
-            <a href="about.html" class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">About</a>
-            <a href="material.html" class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-500 hover:text-zinc-900 transition-all">Material</a>
-            <a href="contact.html" class="font-serif text-sm tracking-[0.1em] uppercase text-zinc-900 border-b border-zinc-900 pb-1">Contact</a>
-        </div>
-
-        <div class="flex items-center gap-6">
-            <a href="https://centerstage.store/" class="hidden md:block px-6 py-2 bg-primary text-white font-serif text-xs tracking-widest uppercase hover:opacity-90 transition-opacity">Buy Now</a>
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-toggle" onclick="document.getElementById('mobile-menu').classList.remove('translate-x-full')" class="md:hidden text-zinc-900">
-                <span class="material-symbols-outlined text-3xl">menu</span>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Center Stage assets/Logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Center Stage Logo"/>
+                Centerstage
+            </a>
+            <div class="nav-links">
+                <a href="index.html"    class="nav-link">Home</a>
+                <a href="about.html"    class="nav-link">About</a>
+                <a href="material.html" class="nav-link">Material</a>
+                <a href="contact.html"  class="nav-link active">Contact</a>
+            </div>
+            <div class="flex items-center nav-cta">
+                <a href="https://centerstage.store/" class="btn btn-primary">Buy Now</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
-
     </nav>
 
-    <!-- Mobile Menu Overlay (outside nav to avoid backdrop-blur stacking context) -->
-    <div id="mobile-menu" style="z-index: 9999; background-color: #fcf9f1;" class="fixed inset-0 translate-x-full transition-transform duration-500 md:hidden flex flex-col p-8">
-        <div class="flex justify-between items-center mb-16">
-            <span class="text-xl font-serif tracking-[0.2em] text-zinc-900 uppercase">Menu</span>
-            <button id="mobile-menu-close" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')" class="text-zinc-900">
-                <span class="material-symbols-outlined text-3xl">close</span>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="mobile-menu-header">
+            <span>Menu</span>
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <span class="material-symbols-outlined">close</span>
             </button>
         </div>
-        <div class="flex flex-col gap-8">
-            <a href="index.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Home</a>
-            <a href="about.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">About</a>
-            <a href="material.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-500">Material</a>
-            <a href="contact.html" class="font-serif text-2xl tracking-[0.1em] uppercase text-zinc-900">Contact</a>
-        </div>
-        <div class="mt-auto">
-            <a href="https://centerstage.store/" class="block text-center py-4 bg-primary text-white font-serif text-sm tracking-widest uppercase">Shop the Collection</a>
+        <nav class="mobile-nav-links">
+            <a href="index.html"    class="mobile-nav-link">Home</a>
+            <a href="about.html"    class="mobile-nav-link">About</a>
+            <a href="material.html" class="mobile-nav-link">Material</a>
+            <a href="contact.html"  class="mobile-nav-link active">Contact</a>
+        </nav>
+        <div class="mobile-menu-footer mt-lg">
+            <a href="https://centerstage.store/" class="btn btn-primary" style="display:block;text-align:center;">Shop the Collection</a>
         </div>
     </div>
 
     <main>
-        <!-- Hero Section -->
-        <section class="relative px-8 md:px-margin-site py-24 flex flex-col items-center text-center fade-in">
-            <div class="max-w-4xl mx-auto">
-                <span class="font-serif text-xs tracking-[0.3em] text-primary mb-4 block uppercase">CONCIERGE</span>
-                <h1 class="font-serif text-6xl mb-8 text-on-surface">Connect.</h1>
-                <p class="font-body text-xl text-secondary max-w-2xl mx-auto">
-                    We'd love to hear from you. Whether you're unsure about a fit, fabric, or styling, we're here to help you choose better.
-                </p>
+
+        <!-- Page Hero -->
+        <section class="section fade-in" style="padding-top:var(--spacing-2xl);text-align:center;">
+            <div class="container">
+                <div class="max-w-md mx-auto">
+                    <span class="eyebrow">Concierge</span>
+                    <h1>Connect.</h1>
+                    <p class="lead mt-sm">We'd love to hear from you. Whether you're unsure about a fit, fabric, or styling, we're here to help you choose better.</p>
+                </div>
             </div>
         </section>
 
         <!-- Contact Channels -->
-        <section class="px-8 md:px-margin-site pb-section-padding fade-in">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl mx-auto">
-                <!-- Visual Card -->
-                <div class="md:col-span-7 aspect-[4/3] rounded-brand overflow-hidden relative group">
-                    <img src="../Center Stage assets/images/cs-vibe-bottoms.jpg" alt="Contact" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
-                </div>
-                <!-- Channels -->
-                <div class="md:col-span-5 flex flex-col gap-8">
-                    <a href="mailto:sarita@centerstage.store" class="flex-1 bg-stone-100 p-12 rounded-brand flex flex-col justify-between hover:bg-stone-200 transition-colors group">
-                        <div class="flex justify-between items-start">
-                            <span class="material-symbols-outlined text-primary text-3xl">mail</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
-                        </div>
-                        <div>
-                            <p class="font-serif text-[10px] tracking-widest text-secondary mb-1 uppercase">EMAIL US</p>
-                            <p class="font-serif text-2xl text-on-surface">sarita@centerstage.store</p>
-                        </div>
-                    </a>
-                    <a href="https://wa.me/918137022440" class="flex-1 bg-emerald-50 p-12 rounded-brand flex flex-col justify-between hover:bg-emerald-100 transition-colors group">
-                        <div class="flex justify-between items-start">
-                            <span class="material-symbols-outlined text-emerald-600 text-3xl">chat</span>
-                            <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
-                        </div>
-                        <div>
-                            <p class="font-serif text-[10px] tracking-widest text-secondary mb-1 uppercase">WHATSAPP</p>
-                            <p class="font-serif text-2xl text-on-surface">Chat with our experts</p>
-                        </div>
-                    </a>
+        <section class="section">
+            <div class="container">
+                <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:var(--spacing-md);align-items:stretch;">
+
+                    <!-- Image -->
+                    <div class="contact-img-wrap fade-in-up" style="aspect-ratio:4/3;">
+                        <img src="Center Stage assets/images/cs_evening_restaurant_1777520377499.png" alt="Center Stage — connect with us"/>
+                    </div>
+
+                    <!-- Channels -->
+                    <div style="display:flex;flex-direction:column;gap:var(--spacing-sm);">
+                        <a href="mailto:sarita@centerstage.store" class="contact-channel email-card fade-in-up" style="animation-delay:0.1s;flex:1;">
+                            <div class="contact-channel-header">
+                                <span class="material-symbols-outlined contact-icon email-icon">mail</span>
+                                <span class="material-symbols-outlined contact-arrow">north_east</span>
+                            </div>
+                            <div>
+                                <span class="contact-channel-label">Email Us</span>
+                                <span class="contact-channel-value">sarita@centerstage.store</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/918137022440" class="contact-channel whatsapp-card fade-in-up" style="animation-delay:0.2s;flex:1;" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-channel-header">
+                                <span class="material-symbols-outlined contact-icon whatsapp-icon">chat</span>
+                                <span class="material-symbols-outlined contact-arrow">north_east</span>
+                            </div>
+                            <div>
+                                <span class="contact-channel-label">WhatsApp</span>
+                                <span class="contact-channel-value">Chat with our experts</span>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-zinc-900 text-stone-400 py-20 px-8 md:px-24 border-t border-zinc-800">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-            <div class="col-span-1">
-                <span class="text-xl font-serif tracking-[0.3em] text-stone-50 uppercase">Centerstage</span>
-                <p class="mt-6 text-[10px] tracking-widest uppercase leading-relaxed">
-                    © 2026 Centerstage. Defined by understated elegance.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Discover</h4>
-                <ul class="flex flex-col gap-4 text-[10px] tracking-widest uppercase">
-                    <li><a href="about.html" class="hover:text-stone-50 transition-colors">About</a></li>
-                    <li><a href="material.html" class="hover:text-stone-50 transition-colors">Material</a></li>
-                    <li><a href="contact.html" class="hover:text-stone-50 transition-colors">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Assistance</h4>
-                <ul class="flex flex-col gap-4 text-[10px] tracking-widest uppercase">
-                    <li><a href="#" class="hover:text-stone-50 transition-colors">Shipping</a></li>
-                    <li><a href="#" class="hover:text-stone-50 transition-colors">Returns</a></li>
-                    <li><a href="#" class="hover:text-stone-50 transition-colors">Privacy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-stone-50 text-[10px] tracking-widest uppercase mb-6 font-bold">Connect</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-stone-50 transition-colors"><span class="material-symbols-outlined">public</span></a>
-                    <a href="#" class="hover:text-stone-50 transition-colors"><span class="material-symbols-outlined">photo_camera</span></a>
-                    <a href="#" class="hover:text-stone-50 transition-colors"><span class="material-symbols-outlined">mail</span></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-brand-name">Centerstage</span>
+                    <p class="footer-tagline">© 2026 Centerstage.<br/>Defined by understated elegance.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="material.html">Material</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Assistance</h4>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Website"><span class="material-symbols-outlined">public</span></a>
+                        <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+                        <a href="mailto:sarita@centerstage.store" aria-label="Email"><span class="material-symbols-outlined">mail</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
     <script>
-        // Simple intersection observer for fade-in animations
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileClose = document.getElementById('mobile-menu-close');
+        navToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+        mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+        // Scroll animations — also fire for elements already in viewport
+        const allFade = document.querySelectorAll('.fade-in-up');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('mobile-menu-toggle');
-        const menuClose = document.getElementById('mobile-menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (menuToggle && menuClose && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-full');
+        }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+        requestAnimationFrame(() => {
+            allFade.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                } else {
+                    observer.observe(el);
+                }
             });
-
-            menuClose.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
-            });
-        }
+        });
     </script>
+
 </body>
 </html>
