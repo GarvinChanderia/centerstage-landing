@@ -425,11 +425,11 @@ p:last-child { margin-bottom: 0; }
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .mobile-nav-link {
     font-family: var(--font-heading);
-    font-size: 2rem;
+    font-size: 1.35rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-muted);
