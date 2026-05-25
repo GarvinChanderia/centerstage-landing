@@ -7,6 +7,10 @@
    Accents: #D6E8F3 (Air Blue), #FCDCE2 (Curtain Rose)
    =========================================== */
 
+/* Google Fonts (fallback/enhancement — also loads Material Symbols) */
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
 /* ---- Local @font-face (primary source — ensures cross-browser consistency) ---- */
 @font-face {
     font-family: 'DM Sans';
@@ -57,10 +61,6 @@
     font-style: normal;
     font-display: swap;
 }
-
-/* Google Fonts (fallback/enhancement — also loads Material Symbols) */
-@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
 /* ---- Tokens ---- */
 :root {
