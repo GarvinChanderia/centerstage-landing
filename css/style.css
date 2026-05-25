@@ -100,7 +100,7 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: clamp(14px, 1vw + 10px, 18px); }
 
 html, body {
     width: 100%;
@@ -246,14 +246,14 @@ p:last-child { margin-bottom: 0; }
 }
 
 .btn-primary {
-    background-color: var(--color-onyx);
-    color: var(--color-white);
-    border-color: var(--color-onyx);
+    background-color: var(--color-aqua);
+    color: var(--color-onyx);
+    border-color: var(--color-aqua);
 }
 .btn-primary:hover {
-    background-color: var(--color-aqua);
-    border-color: var(--color-aqua);
-    color: var(--color-onyx);
+    background-color: var(--color-onyx);
+    border-color: var(--color-onyx);
+    color: var(--color-white);
     transform: translateY(-2px);
 }
 
@@ -351,7 +351,7 @@ p:last-child { margin-bottom: 0; }
     justify-content: center;
     grid-column: 2;
 }
-.nav-logo img { width: 28px; height: 28px; margin-right: 0.5rem; }
+.nav-logo img { height: 28px; width: auto; }
 
 .nav-left, .nav-right {
     display: flex;
