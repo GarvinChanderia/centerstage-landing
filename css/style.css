@@ -956,6 +956,10 @@ p:last-child { margin-bottom: 0; }
     color: rgba(0,0,0,0.75);
     transition: color var(--transition-fast);
 }
+.footer-text {
+    font-size: 1rem;
+    color: rgba(0,0,0,0.75);
+}
 .footer-col a:hover { color: #A24053; }
 .footer-social { display: flex; gap: 1rem; }
 .footer-social a { color: rgba(0,0,0,0.75); transition: color var(--transition-fast); }
