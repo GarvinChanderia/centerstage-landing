@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Specifically allow AI crawlers to build a better knowledge graph
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.centerstage.store/sitemap.xml

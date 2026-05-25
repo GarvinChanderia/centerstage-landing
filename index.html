@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Primary SEO -->
+    <title>Center Stage | Premium Women's Clothing India</title>
+    <meta name="description" content="Shop Center Stage — premium women's smart casual clothing made from natural-origin fibers. Breathable, flattering, and designed for the Indian woman who moves with purpose." />
+    <meta name="author" content="Center Stage" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.centerstage.store/" />
+    <link rel="alternate" hreflang="en-IN" href="https://www.centerstage.store/" />
+
+    <!-- Geo signals -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Center Stage" />
+    <meta property="og:title" content="Center Stage | Premium Women's Clothing India" />
+    <meta property="og:description" content="Shop Center Stage — premium women's smart casual clothing made from natural-origin fibers. Breathable, flattering, and designed for the Indian woman who moves with purpose." />
+    <meta property="og:image" content="https://www.centerstage.store/images/center-stage-smart-casual-hero.png" />
+    <meta property="og:url" content="https://www.centerstage.store/" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@centerstage_in" />
+    <meta name="twitter:title" content="Center Stage | Premium Women's Clothing India" />
+    <meta name="twitter:description" content="Shop Center Stage — premium women's smart casual clothing made from natural-origin fibers. Breathable, flattering, and designed for the Indian woman who moves with purpose." />
+    <meta name="twitter:image" content="https://www.centerstage.store/images/center-stage-smart-casual-hero.png" />
+
+    <!-- Performance: preload above-fold hero -->
+    <link rel="preload" as="image" href="images/center-stage-smart-casual-hero.png" fetchpriority="high" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* ---- Magazine Hero ---- */
+        .hero-magazine {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            background: #0d0d0d;
+        }
+
+        .hero-magazine .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-magazine .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            opacity: 0.82;
+        }
+
+        /* dark gradient bottom-heavy like editorial covers */
+        .hero-magazine .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.10) 40%,
+                    rgba(0, 0, 0, 0.72) 100%);
+        }
+
+        /* top bar — magazine masthead style */
+        .hero-masthead {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem var(--site-gutter);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-masthead-issue {
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .hero-masthead-logo {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--color-white);
+        }
+
+        .hero-masthead-tag {
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        /* vertical side label */
+        .hero-side-label {
+            position: absolute;
+            right: var(--site-gutter);
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            transform-origin: center center;
+            z-index: 20;
+            font-family: var(--font-body);
+            font-size: 0.55rem;
+            font-weight: 500;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            white-space: nowrap;
+        }
+
+        /* main editorial text */
+        .hero-editorial-content {
+            position: relative;
+            z-index: 20;
+            padding: 0 var(--site-gutter) 4rem;
+            max-width: var(--site-max);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-editorial-kicker {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--color-aqua);
+            margin-bottom: 1.2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .hero-editorial-kicker::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 2rem;
+            height: 1px;
+            background: var(--color-aqua);
+        }
+
+        .hero-editorial-h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 400;
+            line-height: 1.0;
+            color: var(--color-white);
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            max-width: 820px;
+        }
+
+        .hero-editorial-h1 em {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-editorial-meta {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .hero-editorial-desc {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 360px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-editorial-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            padding-bottom: 0.3rem;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .hero-editorial-cta:hover {
+            color: var(--color-aqua);
+            border-color: var(--color-aqua);
+        }
+
+        /* Pill variant — clearly visible against the hero image */
+        .hero-editorial-cta--pill {
+            border-bottom: none;
+            padding: 0.85rem 2rem;
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .hero-editorial-cta--pill:hover {
+            background: rgba(255, 255, 255, 0.22);
+            border-color: var(--color-aqua);
+            color: var(--color-aqua);
+            transform: translateY(-2px);
+        }
+
+        /* aqua pill badge on hero */
+        .hero-badge {
+            position: absolute;
+            bottom: 4.5rem;
+            right: var(--site-gutter);
+            z-index: 20;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--color-aqua);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero-badge span {
+            font-family: var(--font-body);
+            font-size: 0.52rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-onyx);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+
+            .hero-masthead-issue,
+            .hero-masthead-tag,
+            .hero-side-label,
+            .hero-badge {
+                display: none;
+            }
+
+            .hero-editorial-h1 {
+                font-size: clamp(2.8rem, 10vw, 4rem);
+            }
+
+            .hero-editorial-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD: Organization / ClothingStore -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Center Stage",
+      "url": "https://www.centerstage.store",
+      "logo": "https://shop.centerstage.store/cdn/shop/files/Frame_2147225842.svg",
+      "description": "Center Stage is an Indian women's clothing brand designing smart casual pieces from natural-origin, bio-derived fibers — breathable, flattering, and built for all-day wear.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "sm@centerstage.store",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.instagram.com/centerstage.store/",
+        "https://www.facebook.com/yourcenterstagestore/",
+        "https://x.com/centerstage_in",
+        "https://www.youtube.com/@centerstage-store"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What fabric does Center Stage use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Center Stage uses natural-origin, bio-derived fibers that are soft, breathable, and gentle on the skin. All fabrics are pre-shrunk and selected for their GSM to suit each silhouette."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Center Stage offer cash on delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Center Stage offers cash on delivery across India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Center Stage's return policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Center Stage offers a 15-day return policy on all purchases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Center Stage ship from and where do they deliver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Center Stage is based in India and ships nationwide across the country."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Center Stage clothing suitable for the Indian climate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Center Stage fabrics are specifically chosen for breathability and comfort in Indian weather — naturally antibacterial, lightweight, and designed to keep you feeling fresh all day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What occasions is Center Stage clothing designed for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Center Stage is designed for smart casual everyday wear — workdays, client meetings, coffee dates, team outings, and weekend plans. Each piece transitions effortlessly across your day."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- JSON-LD: Speakable -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Center Stage | Premium Women's Clothing India",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "xpath": [
+          "/html/head/meta[@name='description']/@content",
+          "//*[@id='fabric-philosophy']",
+          "//*[@class='hero-editorial-h1']"
+        ]
+      },
+      "url": "https://www.centerstage.store/"
+    }
+    </script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="announcement-bar">
+            <div class="magazine-strip-inner">
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">Use "WELCOME10" to enjoy 10% off your first purchase</span>
+                <span class="magazine-strip-item">·</span>
+            </div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/about" class="nav-link">About Us</a>
+                <a href="/contact" class="nav-link">Contact Us</a>
+            </div>
+            <a href="/" class="nav-logo">
+                <img src="logo/Icon/Air Blue BG/SVG/Icon.svg" alt="Center Stage Logo" />
+                center stage
+            </a>
+            <div class="nav-right">
+                <a href="https://www.centerstage.store/collections/women" class="btn btn-primary">Buy Now</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="mobile-menu-header">
+            <span>Menu</span>
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="/" class="mobile-nav-link active">Home</a>
+            <a href="/about" class="mobile-nav-link">About</a>
+            <a href="/contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-menu-footer mt-lg">
+            <a href="https://www.centerstage.store/collections/women" class="btn btn-primary" style="display:block;text-align:center;">Shop
+                the Collection</a>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- Magazine Hero -->
+        <section class="hero-magazine fade-in">
+            <div class="hero-bg">
+                <img src="images/center-stage-smart-casual-hero.png" alt="Center Stage — women's smart casual clothing editorial, natural-origin fabric, India" fetchpriority="high" />
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Masthead bar -->
+            <div class="hero-masthead">
+                <span class="hero-masthead-issue">Vol. I &nbsp;&nbsp; 2026</span>
+                <span class="hero-masthead-logo">Center Stage</span>
+                <span class="hero-masthead-tag">Smart Casual Edit</span>
+            </div>
+
+            <!-- Vertical label -->
+            <span class="hero-side-label">Natural-Origin Fibers &nbsp; · &nbsp; Quiet Luxury</span>
+
+            <!-- Circular badge -->
+            <div class="hero-badge">
+                <span>New<br />Collection<br />Now Live</span>
+            </div>
+
+            <!-- Main editorial copy -->
+            <div class="hero-editorial-content">
+                <span class="hero-editorial-kicker">The Smart Casual Edit</span>
+                <h1 class="hero-editorial-h1">
+                    Dressed<br />
+                    <em>for Every</em><br />
+                    Moment.
+                </h1>
+                <div class="hero-editorial-meta">
+                    <p class="hero-editorial-desc">
+                        Made to look polished, feel comfortable, and belong everywhere your day takes you.
+                    </p>
+                    <a href="https://www.centerstage.store/collections/women" class="hero-editorial-cta hero-editorial-cta--pill">
+                        Shop the Edit &nbsp; &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magazine ticker strip -->
+        <div class="magazine-strip">
+            <div class="magazine-strip-inner">
+                <span class="magazine-strip-item">POLISHED</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">COMFORTABLE</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">FLATTERING</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">BREATHABLE</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">REPEAT-WORTHY</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">POLISHED</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">COMFORTABLE</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">FLATTERING</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">BREATHABLE</span>
+                <span class="magazine-strip-item">·</span>
+                <span class="magazine-strip-item">REPEAT-WORTHY</span>
+                <span class="magazine-strip-item">·</span>
+            </div>
+        </div>
+
+        <!-- Lifestyle Card Gallery -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="section-intro centered mx-auto text-center fade-in-up">
+                    <span class="eyebrow">Lifestyle</span>
+                    <h2>For the Places Your Day Takes You.</h2>
+                    <p class="mt-sm">Made to keep you polished, comfortable, and ready: from client meetings and team
+                        lunches to coffee dates, and weekends.
+                    </p>
+                </div>
+                <div class="card-grid-5">
+                    <a href="https://www.centerstage.store/collections/women" class="lifestyle-card fade-in-up" style="animation-delay:0.1s; display: block;">
+                        <div class="card-aspect">
+                            <img src="images/center-stage-workday-smart-casual.png" alt="Center Stage women's clothing for workdays — breathable smart casual wear" loading="lazy" />
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-tag">Composed &amp; Comfortable</p>
+                            <h3>Workdays</h3>
+                            <p class="card-desc">Polished enough for work. Comfortable enough for the whole day.</p>
+                        </div>
+                    </a>
+                    <a href="https://www.centerstage.store/collections/women" class="lifestyle-card fade-in-up" style="animation-delay:0.2s; display: block;">
+                        <div class="card-aspect">
+                            <img src="images/center-stage-client-meeting-outfit.png" alt="Center Stage outfit for client meetings — effortless, presentable women's fashion" loading="lazy" />
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-tag">Effortless &amp; Presentable</p>
+                            <h3>Client Meetings</h3>
+                            <p class="card-desc">Easy polish for conversations that matter.</p>
+                        </div>
+                    </a>
+                    <a href="https://www.centerstage.store/collections/women" class="lifestyle-card fade-in-up" style="animation-delay:0.3s; display: block;">
+                        <div class="card-aspect">
+                            <img src="images/center-stage-team-outing-apparel.png" alt="Center Stage relaxed women's wear for team outings and brunches" loading="lazy" />
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-tag">Relaxed &amp; Refined</p>
+                            <h3>Team Outings</h3>
+                            <p class="card-desc">For days when comfort matters, but so does looking put together.</p>
+                        </div>
+                    </a>
+                    <a href="https://www.centerstage.store/collections/women" class="lifestyle-card fade-in-up" style="animation-delay:0.4s; display: block;">
+                        <div class="card-aspect">
+                            <img src="images/center-stage-coffee-date-dress.png" alt="Center Stage natural fiber dress for coffee dates — comfortable and stylish" loading="lazy" />
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-tag">Movement &amp; Ease</p>
+                            <h3>Coffee Hours</h3>
+                            <p class="card-desc">Comfort that stays with you, no matter the journey.</p>
+                        </div>
+                    </a>
+                    <a href="https://www.centerstage.store/collections/women" class="lifestyle-card fade-in-up" style="animation-delay:0.5s; display: block;">
+                        <div class="card-aspect">
+                            <img src="images/center-stage-weekend-dress-yellow.png" alt="Center Stage weekend outfit — considered dressing for Indian women" loading="lazy" />
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-tag">Considered Dressing</p>
+                            <h3>Weekend Plans</h3>
+                            <p class="card-desc">Because everyday dressing deserves more thought.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section bg-alabaster">
+            <div class="container">
+                <div class="section-intro centered mx-auto text-center fade-in-up">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2>What Our Customers Say</h2>
+                </div>
+                <div class="grid-3 mt-md">
+                    <div class="aqua-card fade-in-up" style="animation-delay:0s;">
+                        <p style="font-size:1rem; font-style: italic;">"The most comfortable pieces I've ever worn. They
+                            transition from my morning meetings to evening dinners effortlessly."</p>
+                        <h4 class="mt-sm" style="color:var(--color-onyx);">- Sarah J.</h4>
+                    </div>
+                    <div class="aqua-card fade-in-up" style="animation-delay:0.1s;">
+                        <p style="font-size:1rem; font-style: italic;">"Finally, clothing that understands my schedule.
+                            The fabric feels incredible and holds its shape all day."</p>
+                        <h4 class="mt-sm" style="color:var(--color-onyx);">- Priya M.</h4>
+                    </div>
+                    <div class="aqua-card fade-in-up" style="animation-delay:0.2s;">
+                        <p style="font-size:1rem; font-style: italic;">"I am obsessed with the natural fibers. It
+                            breathes perfectly during summer and looks so elevated."</p>
+                        <h4 class="mt-sm" style="color:var(--color-onyx);">- Anita R.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="section-intro centered mx-auto text-center fade-in-up">
+                    <span class="eyebrow">The Philosophy</span>
+                    <h2>Designed for the Woman who has Places to be</h2>
+                    <p class="lead mt-sm">Center Stage is designed for the woman who does not dress to impress everyone
+                        in the room. She dresses to feel ready for the room. Her days are planned and her clothes need
+                        to carry her through client conversations, team lunches, brunches, and coffee dates</p>
+                </div>
+
+                <div class="feature-row mt-lg fade-in-up">
+                    <div class="feature-text">
+                        <h3>Feels Right on the Skin</h3>
+                        <p class="mt-sm">Breathable fabrics chosen Indian weather and all-day comfort.</p>
+                        <br>
+                        <h3>Flatters Without Clinging</h3>
+                        <p class="mt-sm">Silhouettes shaped to give form, ease, and confidence without limiting
+                            movements</p>
+                        <br>
+                        <h3>Adjusts to Real Life</h3>
+                        <p class="mt-sm">Adjustable side ties, flexible waists, back knots, are designed for movement,
+                            comfort, and body changes.</p>
+                        <br>
+                        <h3>Made for More Than One Plan</h3>
+                        <p class="mt-sm">Pieces that move from week days to week ends, effortlessly.</p>
+                    </div>
+                    <div class="feature-img" style="border-radius:2px;overflow:hidden;">
+                        <img src="images/center-stage-lifestyle-drape.png" alt="Center Stage dress — breathable natural-origin fabric for Indian women, all-day comfort" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aqua Feature Block -->
+        <section class="section bg-alabaster">
+            <div class="container">
+                <div class="editorial-divider fade-in-up">
+                    <span>What Goes Into Every Piece</span>
+                </div>
+                <div class="grid-3 mt-md">
+                    <div class="aqua-card fade-in-up" style="animation-delay:0s;">
+                        <span class="material-symbols-outlined"
+                            style="font-size:2rem;margin-bottom:1rem;color:var(--color-onyx);">texture</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Knit & Woven</h3>
+                        <p style="font-size:0.85rem;">Both constructions: knits for movement and stretch, wovens for
+                            structure and drape.</p>
+                    </div>
+                    <div class="aqua-card fade-in-up" style="animation-delay:0.1s;">
+                        <span class="material-symbols-outlined"
+                            style="font-size:2rem;margin-bottom:1rem;color:var(--color-onyx);">science</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">GSM Engineered</h3>
+                        <p style="font-size:0.85rem;">Each fabric is weight-tested for its role: lighter for tops,
+                            heavier for structured pieces.</p>
+                    </div>
+                    <div class="aqua-card fade-in-up" style="animation-delay:0.2s;">
+                        <span class="material-symbols-outlined"
+                            style="font-size:2rem;margin-bottom:1rem;color:var(--color-onyx);">verified</span>
+                        <h3 style="font-size:1.1rem;margin-bottom:0.75rem;">Skin-Safe & Gentle</h3>
+                        <p style="font-size:0.85rem;">Naturally hypoallergenic properties make our fabrics suitable for
+                            sensitive skin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- FAQ Section -->
+        <section class="section bg-white" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="container">
+                <div class="section-intro centered mx-auto text-center fade-in-up">
+                    <span class="eyebrow">Questions?</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="lead mt-sm">Find answers to common questions about our products, sizing, and shipping.</p>
+                </div>
+                <div class="faq-list mt-lg fade-in-up">
+
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary itemprop="name">What makes Center Stage fabrics different?</summary>
+                        <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Center Stage uses natural-origin, bio-derived fibers that are soft, breathable, and gentle on the skin. Our fabrics are specifically chosen for the Indian climate — naturally antibacterial, pre-shrunk, and engineered for all-day comfort.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary itemprop="name">Is Center Stage clothing suitable for the office?</summary>
+                        <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Yes. Center Stage is designed for smart casual everyday wear — workdays, client meetings, and team outings. Each piece transitions effortlessly from professional environments to social weekend plans.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary itemprop="name">Does Center Stage offer cash on delivery?</summary>
+                        <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Yes, Center Stage offers cash on delivery across India.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary itemprop="name">What is Center Stage's return policy?</summary>
+                        <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Center Stage offers a 15-day return policy on all purchases. You can initiate a return by contacting our team at sm@centerstage.store or via WhatsApp.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary itemprop="name">Where does Center Stage ship and how do I track my order?</summary>
+                        <div class="faq-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Center Stage is based in India and ships nationwide. You can track your order at <a href="https://www.delhivery.com/tracking" target="_blank" rel="noopener noreferrer">delhivery.com/tracking</a>.</p>
+                        </div>
+                    </details>
+
+                </div>
+                <div class="mt-lg text-center fade-in-up">
+                    <a href="https://shop.centerstage.store/pages/faq" class="btn btn-secondary">Read All FAQs</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA — Air Blue -->
+        <section class="cta-brand text-center fade-in-up">
+            <div class="container">
+                <div class="max-w-md mx-auto">
+                    <span class="eyebrow" style="color:var(--color-aqua-dark);">The Edit</span>
+                    <h2>Live Your Moment.</h2>
+                    <a href="https://www.centerstage.store/collections/women" class="btn btn-primary">Shop the Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Statement — for GEO/AI citation -->
+        <div class="brand-statement" style="display:none;" aria-hidden="true">
+            Center Stage is an Indian women's clothing brand founded by Sarita Sai Vikram. The brand designs smart casual clothing using natural-origin, bio-derived fibers — breathable, pre-shrunk, and structured for all-day wear. Products are available at www.centerstage.store and ship across India. Center Stage offers a 15-day return policy and cash on delivery.
+        </div>
+
+    </main>
+
+    <!-- Footer Ticker -->
+    <div class="footer-ticker">
+        <div class="magazine-strip-inner">
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">Use "INNER12" To Enjoy 12% Off Your Order</span>
+            <span class="magazine-strip-item" style="color: #ffffff;">·</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand" style="align-self: center;">
+                    <a href="/" class="nav-logo"
+                        style="margin-bottom: var(--spacing-md); display: inline-flex;">
+                        <img src="logo/Primary Logo/Black & White/Black/SVG/Black.svg" alt="Center Stage Logo" style="width: 220px; height: auto;" />
+                    </a>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="/contact">Contact us</a></li>
+                        <li><a href="https://shop.centerstage.store/pages/faq">FAQ</a></li>
+                        <li><a href="https://shop.centerstage.store/blogs/brand-insights" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                        <li><a href="https://www.delhivery.com/tracking" target="_blank" rel="noopener noreferrer">Track order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://www.centerstage.store/pages/terms-conditions">Terms &amp; conditions</a></li>
+                        <li><a href="https://www.centerstage.store/pages/return-refund-policy">Returns &amp; cancellation policy</a></li>
+                        <li><a href="https://www.centerstage.store/pages/privacy-policy">Privacy policy</a></li>
+                        <li><a href="https://www.centerstage.store/pages/shipping-policy">Shipping policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect with us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/yourcenterstagestore/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/centerstage.store/">Instagram</a></li>
+                        <li><a href="https://x.com/centerstage_in">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/@centerstage-store">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our benefits</h4>
+                    <ul class="footer-benefits">
+                        <li><a href="#">15 days return policy</a></li>
+                        <li><a href="#">Cash on delivery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div class="footer-shipping-info" style="display: flex; align-items: center; gap: 8px;">
+                    <span class="material-symbols-outlined" style="font-size: 1.1rem;">public</span>
+                    <span style="font-weight: 500;">Based in India, Shipping across the country.</span>
+                </div>
+                <div class="footer-copyright">
+                    <p style="margin: 0; color: inherit;">&copy; 2026 Center Stage. All Rights Reserved</p>
+                </div>
+                <div class="footer-payment" style="display: flex; gap: 8px; align-items: center;">
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/a459e888501dc98d9bf9edd52ddc6d08cb399550.png?v=1777015813" alt="Visa" style="height: 14px;" />
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/b23076a5b8b32e9f785fda02932ffae43cc81883.png?v=1777016363" alt="Mastercard" style="height: 14px;" />
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/20d6fe7886ed9813e80f1fac4aa0f0839ab8f6a4.png?v=1777016426" alt="Paytm" style="height: 14px;" />
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/8f90a59cd9193670e8239326e90378b74e93bf97.png?v=1777016441" alt="PayPal" style="height: 14px;" />
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/9a3840ef52e2df1a19f53da486aef8fa282c99bf.png?v=1777016467" alt="Google Pay" style="height: 14px;" />
+                    <img src="https://cdn.shopify.com/s/files/1/0571/8917/1284/files/Group_2087332501.png?v=1777016541" alt="Payment Method" style="height: 18px;" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileClose = document.getElementById('mobile-menu-close');
+
+        navToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+        mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+        const allFade = document.querySelectorAll('.fade-in-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+        requestAnimationFrame(() => {
+            allFade.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                } else {
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
