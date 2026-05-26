@@ -1013,14 +1013,24 @@ p:last-child { margin-bottom: 0; }
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
     .nav-left, .nav-right { display: none; }
-    /* Hamburger on the LEFT, logo centred */
-    .nav-toggle { display: block; grid-column: 1; justify-self: start; }
+    /* Hamburger on the LEFT, logo centred — ensure same grid row */
+    .nav-toggle { 
+        display: block; 
+        grid-column: 1; 
+        grid-row: 1;
+        justify-self: start; 
+    }
+    .nav-logo { 
+        grid-column: 2; 
+        grid-row: 1;
+        font-size: 1.4rem; 
+    }
     .nav-container { 
         padding: 0.75rem var(--site-gutter);
         display: grid;
-        grid-template-columns: 1fr auto 1fr; 
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto;
     }
-    .nav-logo { grid-column: 2; font-size: 1.4rem; }
     .grid-5, .card-grid-5 { grid-template-columns: repeat(3, 1fr); }
     .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .col-5, .col-7 { grid-column: span 12; }
@@ -1042,6 +1052,47 @@ p:last-child { margin-bottom: 0; }
     .contact-channel { padding: 2rem; }
     .pull-quote { padding: 1.5rem; }
     .btn { padding: 0.8rem 1.8rem; }
+
+    /* ---- Global mobile text centering ---- */
+    .section-intro,
+    .section-intro h2,
+    .section-intro p,
+    .section-intro .eyebrow {
+        text-align: center;
+    }
+    .feature-text {
+        text-align: center;
+    }
+    .feature-text .eyebrow,
+    .feature-text h2,
+    .feature-text h3,
+    .feature-text p {
+        text-align: center;
+    }
+    /* Centre feature-row children that are plain divs (e.g. "Feel Comes First") */
+    .feature-row > div,
+    .feature-row > div h2,
+    .feature-row > div h3,
+    .feature-row > div p,
+    .feature-row > div .eyebrow {
+        text-align: center;
+    }
+    .usp-item {
+        justify-content: center;
+    }
+    /* Hide decorative dash lines on mobile — they break centered alignment */
+    .usp-line {
+        display: none;
+    }
+    .usp-card {
+        text-align: center;
+    }
+    .editorial-divider span {
+        text-align: center;
+    }
+    .eyebrow {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {

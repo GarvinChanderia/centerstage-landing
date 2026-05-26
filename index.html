@@ -262,23 +262,89 @@
             line-height: 1.5;
         }
 
+        /* Hide mobile badge on desktop */
+        .hero-mobile-badge { display: none; }
+
         @media (max-width: 768px) {
 
             .hero-masthead-issue,
             .hero-masthead-tag,
-            .hero-side-label,
+            .hero-side-label {
+                display: none;
+            }
+
+            /* Center the "CENTER STAGE" masthead text on mobile */
+            .hero-masthead {
+                justify-content: center;
+            }
+            .hero-masthead-logo {
+                text-align: center;
+            }
+
+            /* Keep circular badge hidden on mobile — replaced by inline badge below */
             .hero-badge {
                 display: none;
             }
 
             .hero-editorial-h1 {
                 font-size: clamp(2.8rem, 10vw, 4rem);
+                text-align: center;
+            }
+
+            .hero-editorial-kicker {
+                text-align: center;
+                padding-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+            .hero-editorial-kicker::before {
+                position: static;
+                transform: none;
             }
 
             .hero-editorial-meta {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
                 gap: 1.5rem;
+                text-align: center;
+            }
+
+            .hero-editorial-desc {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .hero-editorial-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 2.5rem;
+            }
+
+            /* Mobile inline "New Collection" badge */
+            .hero-mobile-badge {
+                display: inline-block !important;
+                background: var(--color-aqua);
+                color: var(--color-onyx);
+                font-family: var(--font-body);
+                font-size: 0.6rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.18em;
+                padding: 0.45rem 1.1rem;
+                border-radius: 100px;
+                margin-bottom: 1rem;
+            }
+
+            /* "Feel Comes First" section on about page — center the text column */
+            .cta-rose .feature-row > div:first-child {
+                text-align: center;
+            }
+            .cta-rose .feature-row .usp-item {
+                justify-content: center;
             }
         }
     </style>
@@ -418,15 +484,15 @@
                 <a href="/about" class="nav-link">About Us</a>
                 <a href="/contact" class="nav-link">Contact Us</a>
             </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
             <a href="/" class="nav-logo">
                 <img src="logo/Primary Logo/Black & White/Black/SVG/Black.svg" alt="Center Stage Logo" />
             </a>
             <div class="nav-right">
                 <a href="https://shop.centerstage.store/collections/women" class="btn btn-primary">Buy Now</a>
             </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
     </nav>
     </header>
@@ -476,6 +542,7 @@
 
             <!-- Main editorial copy -->
             <div class="hero-editorial-content">
+                <span class="hero-mobile-badge">New Collection Now Live</span>
                 <span class="hero-editorial-kicker">The Smart Casual Edit</span>
                 <h1 class="hero-editorial-h1">
                     Dressed<br />
