@@ -627,13 +627,17 @@ p:last-child {
 .mobile-menu {
     position: fixed;
     inset: 0;
+    height: 100dvh;
     z-index: 9999;
     background-color: var(--color-alabaster);
     display: flex;
     flex-direction: column;
     padding: 2rem var(--site-gutter);
+    padding-top: calc(2rem + env(safe-area-inset-top));
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
     transform: translateX(100%);
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
 }
 
 .mobile-menu.open {
@@ -669,6 +673,10 @@ p:last-child {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding-bottom: 2rem;
 }
 
 .mobile-nav-link {
